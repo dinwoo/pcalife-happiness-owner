@@ -1,0 +1,80 @@
+@import ./_base
+@import ./_variable
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap')
+
++keyframes(swing)
+  0%
+    transform: rotate(5deg)
+  100%
+    transform: rotate(-5deg)
+
++keyframes(shine)
+  0%
+    opacity: .1
+  100%
+    opacity: 1
+
++keyframes(cloud)
+  0%
+    opacity: .7
+    transform: translateX(-30%)
+  100%
+    opacity: 1
+    transform: translateX(30%)
+
++keyframes(noonBoat)
+  0%
+    left: -40%
+  100%
+    left: 105%
+
++keyframes(boat)
+  0%
+    left: 105%
+  100%
+    left: -30%
+
++keyframes(beat)
+  0%
+    transform: scale(95%)
+  100%
+    transform: scale(100%)
+
+*
+  padding: 0
+  margin: 0
+  font-family: 'Noto Sans TC', sans-serif
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+/* Firefox */
+input[type="number"]
+  -moz-appearance: textfield
+
+img
+  width: 100%
+  vertical-align: top
+
+header
+  width: 100%
+  padding: 15px 30px
+  box-sizing: border-box
+  figure.logo
+    width: 145px
+  +rwd(768px)
+    padding: 10px 15px
+
+footer
+  width: 100%
+  height: 30px
+  // background-image: url(../images/bg02.png)
+  background-size: 653px
+  +rwd(768px)
+    background-size: 400px
+
+  
