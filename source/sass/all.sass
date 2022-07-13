@@ -1,7 +1,7 @@
 @import ./_base
 @import ./_variable
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+TC:wght@400;700&family=Roboto:ital,wght@1,500&display=swap')
 
 +keyframes(swing)
   0%
@@ -9,42 +9,11 @@
   100%
     transform: rotate(-5deg)
 
-+keyframes(shine)
-  0%
-    opacity: .1
-  100%
-    opacity: 1
-
-+keyframes(cloud)
-  0%
-    opacity: .7
-    transform: translateX(-30%)
-  100%
-    opacity: 1
-    transform: translateX(30%)
-
-+keyframes(noonBoat)
-  0%
-    left: -40%
-  100%
-    left: 105%
-
-+keyframes(boat)
-  0%
-    left: 105%
-  100%
-    left: -30%
-
-+keyframes(beat)
-  0%
-    transform: scale(95%)
-  100%
-    transform: scale(100%)
-
 *
   padding: 0
   margin: 0
   font-family: 'Noto Sans TC', sans-serif
+  color: $gray01
 
 /* Chrome, Safari, Edge, Opera */
 input[type="number"]::-webkit-outer-spin-button,
@@ -59,6 +28,9 @@ input[type="number"]
 img
   width: 100%
   vertical-align: top
+        
+html
+  font-size: 20px
 
 header
   width: 100%
@@ -69,12 +41,427 @@ header
   +rwd(768px)
     padding: 10px 15px
 
-footer
-  width: 100%
-  height: 30px
-  // background-image: url(../images/bg02.png)
-  background-size: 653px
-  +rwd(768px)
-    background-size: 400px
 
-  
+
+html
+  font-size: 20px
+  article
+    section.banner
+      .slogan
+        padding: 5px 0
+        text-align: center
+        background-color: $red01
+        figure.icon
+          width: 50px
+          +dib
+        p
+          padding: 0 1rem
+          font-size: 1.7rem
+          color: #fff
+          +dib
+        figure.btn
+          width: 223px
+          +dib
+    section.section01
+      padding: 95px 0
+      background-color: $gray02
+      .container
+        width: 100%
+        padding: 60px 30px
+        margin: auto
+        box-sizing: border-box
+        background-color: #fff
+        font-size: 0
+        .wrapper
+          max-width: 1200px
+          margin: auto
+          .box
+            +dib
+            &:nth-child(1)
+              width: calc(100% - 500px)
+            &:nth-child(2)
+              width: 500px
+              box-sizing: border-box
+            .item
+              width: 50%
+              padding: 0 15px
+              box-sizing: border-box
+              text-align: center
+              +dib
+              figure.pic
+                max-width: 300px
+                margin: auto
+              p.school-info
+                font-size: 0.9rem
+                font-weight: bold
+                span.num
+                  font-size: 1.6rem
+                  line-height: 0.8
+                  color: $red01
+            p.txt
+              font-size: 1.1rem
+              line-height: 1.8
+              span.blue
+                font-size: 1.5rem
+                line-height: 1.2
+                color: $blue01
+              span.green
+                font-size: 1.5rem
+                line-height: 1.2
+                color: $green01
+              span.red
+                font-size: 1.8rem
+                line-height: 1
+                color: $red01
+            figure.btn
+              width: 330px
+              margin-top: 30px
+
+    section.section02
+      padding: 170px 0 50px
+      background-color: $gray02
+      .wrapper
+        max-width: 1450px
+        width: 95%
+        margin: auto
+        position: relative
+        background-color: #fff
+        box-shadow: 0px 0px 20px rgba(#000,.5)
+        .title
+          +titleStyle($red02,-8px,-20px)
+          display: none
+          padding: 0.5rem 2rem
+          position: absolute
+          top: 0
+          left: 50%
+          z-index: 2
+          transform: translate(-50%,-80%)
+        .arrow
+          width: 50px
+          height: 50px
+          border-radius: 50%
+          background-color: $red02
+          cursor: pointer
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+          z-index: 2
+          &.disabled
+            background-color: $gray03
+            pointer-events: none
+          p
+            font-size: 1.5rem
+            font-weight: 300
+            color: #fff
+            +pstc5
+          &#infoLeftArrow
+            left: 35px
+          &#infoRightArrow
+            right: 35px
+        .carousel-box
+          margin-bottom: 45px
+          .owl-dots
+            text-align: center
+            position: relative
+            bottom: -45px
+            .owl-dot
+              width: 14px
+              height: 14px
+              margin: 0 5px
+              border: 2px solid #fff
+              border-radius: 50%
+              background-color: #fff
+              &.active
+                background-color: $red02
+          .container
+            width: 100%
+            padding: 130px 110px 60px
+            box-sizing: border-box
+      .remind
+        padding-top: 30px
+        font-size: 0.8rem
+        text-align: center
+
+    section.section04
+      padding: 90px 0 110px
+      background-color: $green03
+      background-image: url(../images/section04-bg.png)
+      background-repeat: no-repeat
+      background-position: center bottom
+      background-size: contain
+      .wrapper
+        max-width: 1200px
+        width: calc(100% - 30px)
+        padding: 100px 50px
+        margin: auto
+        box-sizing: border-box
+        background-color: #fff
+        position: relative
+        .title
+          +titleStyle($green02,-10px,8px)
+          padding: 1rem 1.5rem
+          position: absolute
+          top: 0
+          left: 50%
+          transform: translate(-50%,-50%)
+          p
+            color: $gray04
+            +dib
+            span.green
+              color: $green02
+          figure.gift-pic
+            width: 75px
+            +dib
+        .box
+          font-size: 0
+          .item
+            width: 50%
+            padding: 0 50px
+            box-sizing: border-box
+            text-align: center
+            display: inline-block
+            vertical-align: top
+            .item-title
+              padding: 10px 50px
+              margin-bottom: 30px
+              font-size: 1.5rem
+              color: #fff
+              background-color: $green04
+              text-align: center
+              box-sizing: border-box
+              display: inline-block
+            .txt
+              min-height: 120px
+              margin-bottom: 30px
+              font-size: 1.05rem
+              text-align: left
+            figure.pic
+              max-width: 340px
+              margin: auto
+              box-shadow: 5px 5px 7px rgba($gray01,.2)
+
+    section.section05
+      background-color: $gray02
+      position: relative
+      .wrapper
+        padding: 110px 0
+        .title
+          +titleStyle($orange01,-6px,-8px)
+          position: absolute
+          top: 0
+          left: 50%
+          transform: translate(-50%,-50%)
+          p
+            span.orange
+              color: $orange01
+        .box
+          max-width: 1500px
+          width: calc(100% - 30px)
+          margin: auto
+          display: flex
+          .item
+            width: calc(50% - 40px)
+            margin: 0 20px
+            background-color: #fff
+            .item-title
+              width: 350px
+              padding: 8px 0
+              margin: auto
+              font-size: 1.7rem
+              background-color: #fff
+              border: 2px solid $orange01
+              text-align: center
+              box-sizing: border-box
+              transform: translateY(-30%)
+              span.orange
+                color: $orange01
+            .form-box
+              padding: 0 65px
+              .row
+                display: flex
+                margin-bottom: 20px
+                &.align-center
+                  align-items: center
+                  p
+                    padding-left: 30px
+                .row-label
+                  p
+                    width: 200px
+                    font-size: 1.2rem
+                    line-height: 3rem
+                    span.remark
+                      color: $orange01
+                .row-content
+                  flex: 1
+                  input[type="text"],input[type="phone"]
+                    width: 100%
+                    padding: 0 1rem
+                    line-height: 3rem
+                    font-size: 1.2rem
+                    border: 1px solid #d4d1d1
+                    box-sizing: border-box
+                  .radio-box
+                    line-height: 3rem
+                    input[type="radio"]
+                      position: absolute
+                      z-index: -1
+                      +dib
+                      &:checked + p:after
+                        display: block
+                    p
+                      padding-left: 60px
+                      padding-right: 25px
+                      font-size: 1.3rem
+                      position: relative
+                      cursor: pointer
+                      +dib
+                      +before
+                        width: 38px
+                        height: 38px
+                        border: 1px solid $gray03
+                        border-radius: 50%
+                        position: absolute
+                        left: 0
+                        top: 0
+                        bottom: 0
+                        margin: auto
+                      +after
+                        display: none
+                        width: 24px
+                        height: 24px
+                        background-color: $red03
+                        border-radius: 50%
+                        position: absolute
+                        left: 8px
+                        top: 0
+                        bottom: 0
+                        margin: auto
+                .txt
+                  span
+                    color: $red03
+              .canvas-box
+                padding-left: 200px
+                canvas
+                  width: 180px
+                  height: 40px
+            figure.btn1
+              width: 190px
+              margin: 40px auto
+            .remind
+              padding-top: 10px
+              font-size: 1.25rem
+              text-align: center
+              span.red
+                color: $red03
+            figure.pic
+              width: 90%
+              max-width: 615px
+              margin: auto
+            figure.btn2
+              width: 190px
+              margin: 40px auto
+
+    section.section06
+      padding: 90px 0
+      background-color: $yellow02
+      .container
+        background-color: #fff
+        box-shadow: 0px 0px 10px rgba(#f0ca6c,1)
+        position: relative
+        .wrapper
+          width: calc( 100% - 30px )
+          max-width: 1200px
+          padding: 40px 0
+          margin: auto
+          .title
+            +titleStyle($gray05,-6px,-8px)
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translate(-50%,-50%)
+            p
+              span.yellow
+                color: $yellow01
+          .box
+            display: flex
+            justify-content: space-around
+            .item
+              text-align: center
+              .num
+                font-size: 3.6rem
+                color: $yellow01
+                font-family: Roboto
+                position: relative
+                bottom: -40px
+              figure.pic
+                max-width: 270px
+                border-radius: 50%
+                margin: auto
+                overflow: hidden
+              .item-title
+                padding: 20px 0
+                font-size: 1.3rem
+                font-weight: bold
+              p.txt
+                font-size: 1rem
+          figure.btn
+            width: 365px
+            margin: 20px auto 0
+
+    section.section07
+      padding-bottom: 50px
+      background-color: $yellow02
+      .wrapper
+        width: calc( 100% - 30px )
+        max-width: 1200px
+        margin: auto
+        text-align: center
+        .title
+          +titleStyle($green05,-12px,10px)
+          p
+            span.green
+              color: $green05
+        .tab-box
+          margin-top: 40px
+          text-align: left
+          .tab
+            width: 200px
+            line-height: 2rem
+            color: $green04
+            border: 2px solid $green04
+            border-bottom: none
+            border-radius: 1rem 1rem 0 0
+            background-color: #fff
+            text-align: center
+            transition: .3s
+            cursor: pointer
+            +dib
+            &.active,&:hover
+              color: #fff
+              background-color: $green04
+        .box
+          width: 100%
+          padding: 30px 80px
+          border: 2px solid $green04
+          border-radius: 0 0 1rem 1rem
+          background-color: #fff
+          box-sizing: border-box
+          .item
+            padding: 30px 0
+            font-size: 0
+            text-align: left
+            & + .item
+              border-top: 1px solid $gray03
+            .item-title
+              width: 190px
+              font-size: 1.25rem
+              color: $green04
+              +dib
+            .info
+              width: calc( 100% - 190px )
+              font-size: 1.25rem
+              +dib
+
+
+
+

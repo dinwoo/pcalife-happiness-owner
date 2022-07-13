@@ -126,7 +126,44 @@ function sweetAlertError(msg) {
 
 $(document).ready(function () {
   checkWid($(window).width());
-  setAnimate();
+  // setAnimate();
+
+  let infoOwl = $("#carouselBox02").owlCarousel({
+    nav: false,
+    dots: true,
+    loop: false,
+    items: 1,
+    center: true,
+    autoHeight: true,
+    margin: 70,
+    onInitialize: (event) => {
+      $(`.section02 .title1`).fadeIn();
+      $("#infoNowPage").text(`01`);
+      $("#infoLeftArrow").addClass("disabled");
+    },
+    onChanged: (event) => {
+      console.log(event.page.index);
+      if (event.page.index >= 0) {
+        $("#infoNowPage").text(`0${event.page.index + 1}`);
+        $(".section02 .title").fadeOut();
+        $(`.section02 .title${event.page.index + 1}`).fadeIn();
+      }
+      if (event.page.index <= 0) {
+        $("#infoLeftArrow").addClass("disabled");
+      } else if (event.page.index == 3) {
+        $("#infoRightArrow").addClass("disabled");
+      } else {
+        $("#infoLeftArrow").removeClass("disabled");
+        $("#infoRightArrow").removeClass("disabled");
+      }
+    },
+  });
+  $("#infoLeftArrow").on("click", () => {
+    infoOwl.trigger("prev.owl.carousel");
+  });
+  $("#infoRightArrow").on("click", () => {
+    infoOwl.trigger("next.owl.carousel");
+  });
 
   $("#sendBtn").on("click", () => {
     if (!$("#name").val()) {

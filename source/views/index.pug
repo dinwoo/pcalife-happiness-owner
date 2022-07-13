@@ -9,5 +9,280 @@ extend ../Layout.pug
 block body
   article
     section.banner
+      .slogan
+        figure.icon
+          img(src="./images/banner-slogan-icon.png")
+        p 保誠人壽和你一起儲備子女教育金
+        figure.btn
+          img(src="./images/banner-slogan-btn.png")
+    section.section01
+      .container
+        .wrapper
+          .box
+            .item
+              figure.pic
+                img(src="./images/section01-pic01.png")
+              p.school-info 私立學校
+              p.school-info
+                | 新台幣
+                span.num 1,055
+                | 萬元
+            .item
+              figure.pic
+                img(src="./images/section01-pic02.png")
+              p.school-info 公立學校
+              p.school-info
+                | 新台幣
+                span.num 154
+                | 萬元
+          .box
+            p.txt 根據教育部統計處公布資料，
+            p.txt 一個孩子從幼稚園至研究所畢業所需的教育費用，
+            p.txt
+              | 會因應
+              span.blue 公
+              | 、
+              span.green 私
+              | 立及國內、外學校的選擇
+            p.txt
+              | 會有近
+              span.red 7
+              | 倍的差距！
+            figure.btn
+              img(src="./images/section01-btn.png")
+    section.section02
+      .wrapper
+        .title.title1
+          .decorate
+            .t-dot “
+            .b-dot ”
+          p 請問您有提早
+          p 為子女準備教育金了嗎？
+        .title.title2
+          .decorate
+            .t-dot “
+            .b-dot ”
+          p 請問您有提早2
+          p 為子女準備教育金了嗎？
+        .title.title3
+          .decorate
+            .t-dot “
+            .b-dot ”
+          p 請問您有提早3
+          p 為子女準備教育金了嗎？
+        .title.title4
+          .decorate
+            .t-dot “
+            .b-dot ”
+          p 請問您有提早4
+          p 為子女準備教育金了嗎？
+        .title.title5
+          .decorate
+            .t-dot “
+            .b-dot ”
+          p 請問您有提早5
+          p 為子女準備教育金了嗎？
+        .arrow#infoLeftArrow
+          p <
+        .arrow#infoRightArrow
+          p >
+        .carousel-box.owl-carousel#carouselBox02
+          .container.container1
+            .box
+              h1 box1
+          .container.container2
+            .box
+              h1 box2
+          .container.container3
+            .box
+              h1 box3
+          .container.container4
+            .box
+              h1 box4
+          .container.container5
+            .box
+              h1 box5
+      .remind 資料來源：保誠人壽2020～2022年子女教育金準備調查
+    section.section03
+      .wrapper
+    section.section04
+      .wrapper
+        .title
+          .decorate
+            .t-dot “
+            .b-dot ”
+          p
+            | 免費預約
+            span.green 享好禮
+          figure.gift-pic
+            img(src="./images/section04-gift.png")
+        .box
+          .item
+            .item-title 第1重 預約禮
+            .txt 即日起至2022/12/31止，成功預約並經顧問確認有諮詢事實，即符合好禮月月抽活動資格，每月將抽出60份價值170元的星巴克電子飲料券，每人限1次中獎機會，共計300份。
+            figure.pic
+              img(src="./images/section04-pic01.png")
+          .item
+            .item-title 第2重 投保禮
+            .txt 即日起至2022/12/31止，預約顧問諮詢並投保成功，即有機會獲得3,000元福利即享券，每人限1次中獎機會，共計將抽出10名。
+            figure.pic
+              img(src="./images/section04-pic02.png")
+    section.section05
+      .wrapper
+        .title
+          .decorate
+            .t-dot “
+            .b-dot ”
+          p
+            | 免費
+            span.orange 預約方式
+        .box
+          .item
+            .item-title
+              | 請
+              span.orange 與我聯絡
+            .form-box
+              .row
+                .row-label
+                  p 姓 名
+                    span.remark *
+                .row-content
+                  input#name(type="text" autocomplete="off")
+              .row
+                .row-label
+                  p 性 別
+                    span.remark *
+                .row-content
+                  .radio-box
+                    label
+                      input(type="radio",name="gender",value="1")
+                      p 男
+                    label
+                      input(type="radio",name="gender",value="0")
+                      p 女
+              .row
+                .row-label
+                  p Email
+                    span.remark *
+                .row-content
+                  input#email(type="text" autocomplete="off")
+              .row
+                .row-label
+                  p 手 機
+                    span.remark *
+                .row-content
+                  input#phone(type="phone" maxLength="10" placeholder="手機格式：0911222333 | 家電格式：0233334444" autocomplete="off")
+              .row
+                .row-label
+                  p 請輸入驗證碼
+                    span.remark *
+                .row-content
+                  input#name(type="text" autocomplete="off")
+              .canvas-box
+                canvas(id="canvas")
+              .row.align-center
+                input#personalInformation(type="checkbox")
+                p.txt
+                  | 我已閱讀並同意
+                  span#privacyBtn 個人資料告知暨同意事項
+              .row.align-center
+                input#checkBtn(type="checkbox")
+                p.txt
+                  | 我已確認以上資料正確無誤 
+            figure.btn1
+              img(src="./images/section05-btn01.png")
+          .item
+            .item-title
+              | 我想
+              span.orange 自己挑顧問
+            .remind
+              | 依個人需求量身篩選，輸入條件、快速篩選、
+              br
+              | 無壓力媒合，簡單三步驟，找到最懂你的
+              span.red 保險顧問
+            figure.pic
+              img(src="./images/section05-pic.png")
+            figure.btn2
+              img(src="./images/section05-btn02.png")
+          
+    section.section06
+      .container
+        .wrapper
+          .title
+            .decorate
+              .t-dot “
+              .b-dot ”
+            p
+              span.yellow 子女教育金準備
+              | 必備商品
+          .box
+            .item
+              .num 01
+              figure.pic
+                img(src="./images/section06-pic01.png")
+              .item-title
+                | 保誠人壽
+                br
+                |萬事利達外幣終身壽險
+              p.txt
+                | 美元貨幣，資產多元
+                br
+                | 英式分紅，累積保額
+                br
+                | 6年繳費，終身保障
+            .item
+              .num 02
+              figure.pic
+                img(src="./images/section06-pic02.png")
+              .item-title
+                | 保誠人壽
+                br
+                |萬事利達外幣終身壽險
+              p.txt
+                | 美元貨幣，資產多元
+                br
+                | 英式分紅，累積保額
+                br
+                | 6年繳費，終身保障
+            .item
+              .num 03
+              figure.pic
+                img(src="./images/section06-pic03.png")
+              .item-title
+                | 保誠人壽
+                br
+                |萬事利達外幣終身壽險
+              p.txt
+                | 美元貨幣，資產多元
+                br
+                | 英式分紅，累積保額
+                br
+                | 6年繳費，終身保障
+          figure.btn
+            img(src="./images/section06-btn.png")
+
+    section.section07
+      .wrapper
+        .title
+          .decorate
+            .t-dot “
+            .b-dot ”
+          p
+            | 子女教育金
+            span.green 相關報導
+        .tab-box
+          .tab.active 新聞曝光
+          .tab 專家推薦
+        .box
+          .item
+            .item-title 經濟日報網
+            .info 英國保誠人壽調查：逾7成家長用保險準備教育金
+          .item
+            .item-title 經濟日報網
+            .info 調查：準備教育基金 家長今年偏愛投資型保單
+          .item
+            .item-title 自由時報
+            .info 從小讀私校、出國留學費用破千萬 調查：7成家長用保險備妥教育金
+
 
 
