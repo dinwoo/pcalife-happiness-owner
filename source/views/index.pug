@@ -9,12 +9,26 @@ extend ../Layout.pug
 block body
   article
     section.banner
+      .main
+        figure.title
+          img(src="./images/banner-title.png")
+        figure.kv
+          img(src="./images/banner-kv.png")
+        .dialogue.dialogue1
+          | 你知道大家都是如何
+          br
+          | 儲備子女教育金的嗎?
+        .dialogue.dialogue2
+          | 你有算過該為孩子
+          br
+          | 準備多少教育基金嗎?
       .slogan
         figure.icon
           img(src="./images/banner-slogan-icon.png")
         p 保誠人壽和你一起儲備子女教育金
         figure.btn
           img(src="./images/banner-slogan-btn.png")
+    
     section.section01
       .container
         .wrapper
@@ -50,38 +64,54 @@ block body
               | 倍的差距！
             figure.btn
               img(src="./images/section01-btn.png")
+    
     section.section02
       .wrapper
-        .title.title1
-          .decorate
-            .t-dot “
-            .b-dot ”
-          p 請問您有提早
-          p 為子女準備教育金了嗎？
-        .title.title2
-          .decorate
-            .t-dot “
-            .b-dot ”
-          p 請問您有提早2
-          p 為子女準備教育金了嗎？
-        .title.title3
-          .decorate
-            .t-dot “
-            .b-dot ”
-          p 請問您有提早3
-          p 為子女準備教育金了嗎？
-        .title.title4
-          .decorate
-            .t-dot “
-            .b-dot ”
-          p 請問您有提早4
-          p 為子女準備教育金了嗎？
-        .title.title5
-          .decorate
-            .t-dot “
-            .b-dot ”
-          p 請問您有提早5
-          p 為子女準備教育金了嗎？
+        .title-box.title1
+          .title
+            .decorate
+              .t-dot “
+              .b-dot ”
+            p 請問您有提早
+            p 為子女準備
+              span.red.big 教育金
+              | 了嗎？
+        .title-box.title2
+          .title
+            .decorate
+              .t-dot “
+              .b-dot ”
+            p 在一位子女身上
+            p 您認為應該準備多少
+              span.red.big 教育金
+              | ?
+        .title-box.title3
+          .title
+            .decorate
+              .t-dot “
+              .b-dot ”
+            p 在子女教育基金準備上
+            p
+              span.red 傾向
+              | 於哪種
+              span.red.big 投資回報關係
+              | ?
+        .title-box.title4
+          .title
+            .decorate
+              .t-dot “
+              .b-dot ”
+            p 您目前使用哪些
+              span.red.big 金融工具
+            p 準備子女教育金?
+        .title-box.title5
+          .title
+            .decorate
+              .t-dot “
+              .b-dot ”
+            p 您用
+              span.red.big 哪類保險
+            p 來準備教育基金?
         .arrow#infoLeftArrow
           p <
         .arrow#infoRightArrow
@@ -89,22 +119,99 @@ block body
         .carousel-box.owl-carousel#carouselBox02
           .container.container1
             .box
-              h1 box1
+              p.txt
+                | 近
+                span.red.big 6
+                span.red 成
+                | 家長表示已
+                span.red 開始
+                | 為子女準備
+                span.red 教育基金
+                | ，
+                br
+                | 其中，超過
+                span.red 近
+                span.red.big 4
+                span.red 成
+                | 的家長願意投入家庭收入的11~20%作為教育經費。
+              .chart-box
+                figure.pic
+                  img(src="./images/section02-pic01.png")
           .container.container2
             .box
-              h1 box2
+              p.txt
+                | 相較2021年，
+                br
+                | 近
+                span.red.big 6
+                span.red 成
+                | 家長願意為子女投入
+                span.red.big 300
+                span.red 萬
+                | 元以上的教育經費。
+              .chart-box
+                figure.pic
+                  img(src="./images/section02-pic02.png")
+                figure.pic2
+                  img(src="./images/section02-pic02-2.png")
           .container.container3
             .box
-              h1 box3
+              p.txt
+                span.red 多數
+                | 家長仍傾向選擇
+                span.red 長期投入
+                | ，分期領取回報的理財工具為孩子準備教育基金。
+              .chart-box
+                figure.pic
+                  img(src="./images/section02-pic03.png")
           .container.container4
             .box
-              h1 box4
+              p.txt
+                | 逾
+                span.red 七成
+                | 家長偏好使用
+                span.green 低風險
+                | 的
+                span.green 定存儲蓄
+                | 及
+                span.green 保險商品
+                | 以準備子女教育金
+                br
+                | 其中，選擇保險商品的家長則
+                span.red 超過5成
+              .chart-box
+                figure.pic
+                  img(src="./images/section02-pic04.png")
           .container.container5
             .box
-              h1 box5
+              p.txt
+                | 近
+                span.red 五成
+                | 家長仍偏好使用
+                span.green 分紅保單
+                | 準備教育金，
+                span.green 投資型保單
+                | 相較於2020年成長
+                span.red 逾25%
+                | 。
+                br
+                | 顯示多數家長偏好長期持有，同時滿足
+                span.red 投資
+                | 與
+                span.red 保障
+                | 的雙重需求。
+              .chart-box
+                figure.pic
+                  img(src="./images/section02-pic05.png")
       .remind 資料來源：保誠人壽2020～2022年子女教育金準備調查
+    
     section.section03
       .wrapper
+        figure.main
+          img(src="./images/section03-main.png")
+        figure.btn
+          img(src="./images/section03-btn.png")
+    
     section.section04
       .wrapper
         .title
@@ -127,6 +234,7 @@ block body
             .txt 即日起至2022/12/31止，預約顧問諮詢並投保成功，即有機會獲得3,000元福利即享券，每人限1次中獎機會，共計將抽出10名。
             figure.pic
               img(src="./images/section04-pic02.png")
+
     section.section05
       .wrapper
         .title
@@ -180,6 +288,7 @@ block body
                   input#name(type="text" autocomplete="off")
               .canvas-box
                 canvas(id="canvas")
+                p.reload 重新整理
               .row.align-center
                 input#personalInformation(type="checkbox")
                 p.txt
@@ -191,6 +300,21 @@ block body
                   | 我已確認以上資料正確無誤 
             figure.btn1
               img(src="./images/section05-btn01.png")
+            .success-popup
+              .main
+                .close
+                  .close-btn
+                  p 關閉
+                .info
+                  | 您的資料已成功送出，系統將於
+                  br
+                  | 「我的幸福我做主」保險顧問媒合平台
+                  br
+                  | 為您創建專屬帳號，
+                  br
+                  | 後續將由專業顧問與您聯繫諮詢，
+                  br
+                  | 感謝您的耐心等待。
           .item
             .item-title
               | 我想
@@ -283,6 +407,59 @@ block body
           .item
             .item-title 自由時報
             .info 從小讀私校、出國留學費用破千萬 調查：7成家長用保險備妥教育金
+
+    section.section08
+      .container
+        .title 得獎公告
+          span -
+        .info-box
+          .row
+            .sub-title 第一重 預約禮
+            .txt 活動獎項將於每月15日前，以電腦隨機方式抽出得獎者，得獎名單將公告於本活動網頁此處，並於公告後兩週內以手機簡訊方式發送咖啡券電子序號及兌換方式給中獎者，請中獎者於指定之期限內完成領獎手續，若逾時未回覆或未提供正確資訊以供聯繫者，視同放棄。本活動若有變動將於本活動網頁公告，不另行通知。
+          .row
+            .sub-title 第二重 投保禮
+            .txt 活動獎項將於2023年01月31日前以電腦隨機方式抽出得獎者，得獎名單將公告於本活動網頁此處 ，並於公告後兩週內以手機簡訊方式發送咖啡券電子序號及兌換方式給中獎者，請中獎者於指定之期限內完成領獎手續，若逾時未回覆或未提供正確資訊以供聯繫者，視同放棄。本活動若有變動將於本活動網頁公告，不另行通知。
+      .container
+        .title 活動辦法
+          span -
+        .info-box
+          .row
+            .dot •主辦單位
+            .txt 保誠人壽保險股份有限公司 (下稱「保誠人壽」)
+          .row
+            .dot •活動期間
+            .txt 自2022年8月1日起至2022年12月31日止。活動時間以保誠人壽網站伺服器時間為準。
+          .row
+            .dot •參加對象
+            .txt 限設籍中華民國之本國公民，年齡 20 歲(含)以上且未受監護或輔助宣告者。
+          .row
+            .sub-title 第一重 預約禮
+            .txt 活動期間內於本活動網頁或「我的幸福我做主」保險顧問媒合平台，成功預約並經顧問確認有諮詢事實，即符合好禮月月抽活動資格，每月將抽出六十份價值170元的星巴克電子飲料券，每人限一次中獎機會，共計三百份。若手機號碼相同將視為同一預約者。
+          .row
+            .sub-title 第二重 投保禮
+            .txt
+              | 活動期間內於本活動網頁或「我的幸福我做主」保險顧問媒合平台，預約顧問諮詢並透過大誠保經通路成功投保，於抽獎日當日該保單屬有效且於抽獎前無撤銷、解約等情事，即可參加本抽獎活動，將有機會獲得3,000元福利即享券，每人限一次中獎機會，共計將抽出十名。
+              br
+              br
+              | 本活動須透過保誠人壽活動網站或「我的幸福我做主」保險顧問媒合平台參加。同時間參加其他保誠人壽活動視各活動內容而定，保誠人壽保有活動資格審核權利。
+      .container
+        .title 點開看完整活動注意事項
+          span -
+        .info-box
+          .row
+            .dot.txt •本活動參加者於參加本活動之同時，即同意接受本活動之活動辦法及注意事項。
+            .dot.txt •本活動獎項之照片、圖案僅供參考；獎項如遇缺貨或不可抗力之因素無法提供時，主辦單位有權以其他等值品替代，得獎者不得要求轉換、轉讓或折換現金。
+            .dot.txt •依中華民國稅法規定，其年度機會中獎金額(價值)累計達新臺幣1,000元以上者，需依法繳交身分證影本供保誠人壽申報所得等稅務作業使用，並將以新台幣計價列入當年度之個人綜合所得稅申報；中獎金額(價值)達新臺幣20,010元以上者，中獎者依法需自付10%稅金(若中獎者為非境內居住個人或無固定營業場所營利事業為20%稅金)，並於領獎截止日前依領獎辦法規定填寫並繳交相關資料。因參加本活動而須支付任何稅捐皆為活動得獎者之義務，概與保誠人壽無關。前述稅捐法規如有更新或變動者，依修正後之最新規定辦理。
+            .dot.txt •本活動獎項之寄發，若因資料錯誤非可歸責保誠人壽之事由而導致無法收件或有其他問題，保誠人壽恕不負責。保誠人壽非獎品製造者或提供者，與各項獎品或服務之製造或提供廠商無任何代理或合夥關係，且本活動獎品之保固期限均依廠商出廠時實際提供者為準。如領取後對獎品之使用方式、售後服務、保固等發生任何爭議，概與保誠人壽無關。
+            .dot.txt •本活動之登入、交易、申請開通、抽獎資格、兌獎紀錄、中獎紀錄均以保誠人壽電腦系統紀錄為準，保誠人壽有權檢視各項交易、抽獎及相關紀錄，若參加者有任何違反活動注意事項、利用程式惡意影響活動結果或任何破壞公平性及其他非法行為等，保誠人壽保有取消其參加抽獎及中獎資格之權利。
+            .dot.txt •保誠人壽保有取消、終止、修改、暫停活動、更換贈品等變更活動內容細項的權利，並得以公告方式通知參加者。如有未盡事宜，悉依保誠人壽相關規定或解釋辦理。
+            .dot.txt •本活動之保誠人壽網路投保保險商品，其詳細給付內容、注意事項及條件限制等事項，請參閱保誠人壽網路投保網站商品介紹。為確保參加活動者的權益，基於保險公司與消費者衡平對等原則， 參加活動者仍應詳加閱讀保單條款與相關文件，審慎選擇保險商品。相關針對個資蒐集、處理及利用告知事項詳見 : 保誠人壽蒐集、處理及利用個人資料告知事項
+              br
+              | (https://online.pcalife.com.tw/cwsol/agreement) 。
+
+    figure.fix-btn
+      img(src="./images/fix-btn.png")
+
 
 
 

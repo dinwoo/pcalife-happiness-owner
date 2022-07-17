@@ -125,3 +125,22 @@
       transform: translate(75%, 58%)
   p
     font-size: 1.9rem
+  +rwd(768px)
+    padding: 0.5rem 1rem
+    .decorate
+      top: $t/2
+      left: $l/2
+      &:before
+        border-top: 2px solid $color
+        border-right: 2px solid $color
+      &:after
+        border-bottom: 2px solid $color
+        border-left: 2px solid $color
+      .t-dot
+        font-size: 2rem
+        // transform: translate(-65%, -32%)
+      .b-dot
+        font-size: 2rem
+        // transform: translate(75%, 58%)
+    p
+      font-size: 1.4rem

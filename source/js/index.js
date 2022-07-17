@@ -145,12 +145,12 @@ $(document).ready(function () {
       console.log(event.page.index);
       if (event.page.index >= 0) {
         $("#infoNowPage").text(`0${event.page.index + 1}`);
-        $(".section02 .title").fadeOut();
+        $(".section02 .title-box").fadeOut();
         $(`.section02 .title${event.page.index + 1}`).fadeIn();
       }
       if (event.page.index <= 0) {
         $("#infoLeftArrow").addClass("disabled");
-      } else if (event.page.index == 3) {
+      } else if (event.page.index == 4) {
         $("#infoRightArrow").addClass("disabled");
       } else {
         $("#infoLeftArrow").removeClass("disabled");
