@@ -173,13 +173,15 @@
       </section>
       <section class="section04">
         <div class="wrapper">
-          <div class="title">
-            <div class="decorate">
-              <div class="t-dot">“</div>
-              <div class="b-dot">”</div>
+          <div class="title-box">
+            <div class="title">
+              <div class="decorate">
+                <div class="t-dot">“</div>
+                <div class="b-dot">”</div>
+              </div>
+              <p>免費預約<span class="green">享好禮</span></p>
+              <figure class="gift-pic"><img src="./images/section04-gift.png"></figure>
             </div>
-            <p>免費預約<span class="green">享好禮</span></p>
-            <figure class="gift-pic"><img src="./images/section04-gift.png"></figure>
           </div>
           <div class="box">
             <div class="item">
@@ -197,12 +199,14 @@
       </section>
       <section class="section05">
         <div class="wrapper">
-          <div class="title">
-            <div class="decorate">
-              <div class="t-dot">“</div>
-              <div class="b-dot">”</div>
+          <div class="title-box">
+            <div class="title">
+              <div class="decorate">
+                <div class="t-dot">“</div>
+                <div class="b-dot">”</div>
+              </div>
+              <p>免費<span class="orange">預約方式</span></p>
             </div>
-            <p>免費<span class="orange">預約方式</span></p>
           </div>
           <div class="box">
             <div class="item">
@@ -254,7 +258,7 @@
                     <p>請輸入驗證碼<span class="remark">*</span></p>
                   </div>
                   <div class="row-content">
-                    <input id="name" type="text" autocomplete="off">
+                    <input id="verification" type="text" autocomplete="off">
                   </div>
                 </div>
                 <div class="canvas-box">
@@ -270,7 +274,7 @@
                   <p class="txt">我已確認以上資料正確無誤 </p>
                 </div>
               </div>
-              <figure class="btn1"><img src="./images/section05-btn01.png"></figure>
+              <figure class="btn1" id="sendBtn"><img src="./images/section05-btn01.png"></figure>
               <div class="success-popup">
                 <div class="main">
                   <div class="close">
@@ -293,12 +297,14 @@
       <section class="section06">
         <div class="container">
           <div class="wrapper">
-            <div class="title">
-              <div class="decorate">
-                <div class="t-dot">“</div>
-                <div class="b-dot">”</div>
+            <div class="title-box">
+              <div class="title">
+                <div class="decorate">
+                  <div class="t-dot">“</div>
+                  <div class="b-dot">”</div>
+                </div>
+                <p><span class="yellow">子女教育金準備</span>必備商品</p>
               </div>
-              <p><span class="yellow">子女教育金準備</span>必備商品</p>
             </div>
             <div class="box">
               <div class="item">
@@ -326,36 +332,40 @@
       </section>
       <section class="section07">
         <div class="wrapper">
-          <div class="title">
-            <div class="decorate">
-              <div class="t-dot">“</div>
-              <div class="b-dot">”</div>
+          <div class="title-box">
+            <div class="title">
+              <div class="decorate">
+                <div class="t-dot">“</div>
+                <div class="b-dot">”</div>
+              </div>
+              <p>子女教育金<span class="green">相關報導</span></p>
             </div>
-            <p>子女教育金<span class="green">相關報導</span></p>
           </div>
-          <div class="tab-box">
-            <div class="tab active">新聞曝光</div>
-            <div class="tab">專家推薦</div>
-          </div>
-          <div class="box">
-            <div class="item">
-              <div class="item-title">經濟日報網</div>
-              <div class="info">英國保誠人壽調查：逾7成家長用保險準備教育金</div>
+          <div class="main">
+            <div class="tab-box">
+              <div class="tab active">新聞曝光</div>
+              <div class="tab">專家推薦</div>
             </div>
-            <div class="item">
-              <div class="item-title">經濟日報網</div>
-              <div class="info">調查：準備教育基金 家長今年偏愛投資型保單</div>
-            </div>
-            <div class="item">
-              <div class="item-title">自由時報</div>
-              <div class="info">從小讀私校、出國留學費用破千萬 調查：7成家長用保險備妥教育金</div>
+            <div class="box">
+              <div class="item">
+                <div class="item-title">經濟日報網</div>
+                <div class="info">英國保誠人壽調查：逾7成家長用保險準備教育金</div>
+              </div>
+              <div class="item">
+                <div class="item-title">經濟日報網</div>
+                <div class="info">調查：準備教育基金 家長今年偏愛投資型保單</div>
+              </div>
+              <div class="item">
+                <div class="item-title">自由時報</div>
+                <div class="info">從小讀私校、出國留學費用破千萬 調查：7成家長用保險備妥教育金</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section class="section08">
         <div class="container">
-          <div class="title">得獎公告<span>-</span></div>
+          <div class="title" isShow="0">得獎公告<span>＋</span></div>
           <div class="info-box">
             <div class="row">
               <div class="sub-title">第一重 預約禮</div>
@@ -368,7 +378,7 @@
           </div>
         </div>
         <div class="container">
-          <div class="title">活動辦法<span>-</span></div>
+          <div class="title" isShow="0">活動辦法<span>＋</span></div>
           <div class="info-box">
             <div class="row">
               <div class="dot">•主辦單位</div>
@@ -393,7 +403,7 @@
           </div>
         </div>
         <div class="container">
-          <div class="title">點開看完整活動注意事項<span>-</span></div>
+          <div class="title" isShow="0">點開看完整活動注意事項<span>＋</span></div>
           <div class="info-box">
             <div class="row">
               <div class="dot txt">•本活動參加者於參加本活動之同時，即同意接受本活動之活動辦法及注意事項。</div>
