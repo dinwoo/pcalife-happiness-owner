@@ -20,12 +20,6 @@ function verifyNumber(number) {
   return numberRules.test(number);
 }
 
-function verifyEmail(email) {
-  const emailRules =
-    /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
-  return emailRules.test(email);
-}
-
 function checkWid(windowSize) {
   if (windowSize < 768 && !isMobile) {
     isMobile = true;
@@ -400,9 +394,6 @@ $(document).ready(function () {
     } else if ($("input[name='gender']:checked").val() == undefined) {
       sweetAlertError("請選擇性別");
       return;
-    } else if (!$("#email").val() || !verifyEmail($("#email").val())) {
-      sweetAlertError("請填寫Email及確認格式正確");
-      return;
     } else if (!$("#phone").val() || !verifyNumber($("#phone").val())) {
       sweetAlertError("請填寫電話及確認格式正確");
       return;
@@ -422,7 +413,6 @@ $(document).ready(function () {
       data: {
         name: $("#name").val(),
         gender: Number($("input[name='gender']:checked").val()),
-        email: $("#email").val(),
         phone: $("#phone").val(),
         deviceType: mobile() ? 2 : 1,
       },
@@ -438,7 +428,6 @@ $(document).ready(function () {
           $(".section05 .success-popup").fadeIn();
           $("#name").val("");
           $("input[name='gender']").prop("checked", false);
-          $("#email").val("");
           $("#phone").val("");
           $("#code").val("");
           $("#personalInformation").prop("checked", false);
