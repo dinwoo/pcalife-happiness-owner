@@ -214,15 +214,16 @@ block body
     
     section.section04
       .wrapper
-        .title
-          .decorate
-            .t-dot “
-            .b-dot ”
-          p
-            | 免費預約
-            span.green 享好禮
-          figure.gift-pic
-            img(src="./images/section04-gift.png")
+        .title-box
+          .title
+            .decorate
+              .t-dot “
+              .b-dot ”
+            p
+              | 免費預約
+              span.green 享好禮
+            figure.gift-pic
+              img(src="./images/section04-gift.png")
         .box
           .item
             .item-title 第1重 預約禮
@@ -237,13 +238,14 @@ block body
 
     section.section05
       .wrapper
-        .title
-          .decorate
-            .t-dot “
-            .b-dot ”
-          p
-            | 免費
-            span.orange 預約方式
+        .title-box
+          .title
+            .decorate
+              .t-dot “
+              .b-dot ”
+            p
+              | 免費
+              span.orange 預約方式
         .box
           .item
             .item-title
@@ -285,7 +287,7 @@ block body
                   p 請輸入驗證碼
                     span.remark *
                 .row-content
-                  input#name(type="text" autocomplete="off")
+                  input#verification(type="text" autocomplete="off")
               .canvas-box
                 canvas(id="canvas")
                 p.reload 重新整理
@@ -298,7 +300,7 @@ block body
                 input#checkBtn(type="checkbox")
                 p.txt
                   | 我已確認以上資料正確無誤 
-            figure.btn1
+            figure.btn1#sendBtn
               img(src="./images/section05-btn01.png")
             .success-popup
               .main
@@ -332,13 +334,14 @@ block body
     section.section06
       .container
         .wrapper
-          .title
-            .decorate
-              .t-dot “
-              .b-dot ”
-            p
-              span.yellow 子女教育金準備
-              | 必備商品
+          .title-box
+            .title
+              .decorate
+                .t-dot “
+                .b-dot ”
+              p
+                span.yellow 子女教育金準備
+                | 必備商品
           .box
             .item
               .num 01
@@ -387,31 +390,43 @@ block body
 
     section.section07
       .wrapper
-        .title
-          .decorate
-            .t-dot “
-            .b-dot ”
-          p
-            | 子女教育金
-            span.green 相關報導
-        .tab-box
-          .tab.active 新聞曝光
-          .tab 專家推薦
-        .box
-          .item
-            .item-title 經濟日報網
-            .info 英國保誠人壽調查：逾7成家長用保險準備教育金
-          .item
-            .item-title 經濟日報網
-            .info 調查：準備教育基金 家長今年偏愛投資型保單
-          .item
-            .item-title 自由時報
-            .info 從小讀私校、出國留學費用破千萬 調查：7成家長用保險備妥教育金
+        .title-box
+          .title
+            .decorate
+              .t-dot “
+              .b-dot ”
+            p
+              | 子女教育金
+              span.green 相關報導
+        .main
+          .tab-box
+            .tab.active 新聞曝光
+            .tab 專家推薦
+          .box.active
+            .item
+              .item-title 經濟日報網
+              .info 英國保誠人壽調查：逾7成家長用保險準備教育金
+            .item
+              .item-title 經濟日報網
+              .info 調查：準備教育基金 家長今年偏愛投資型保單
+            .item
+              .item-title 自由時報
+              .info 從小讀私校、出國留學費用破千萬 調查：7成家長用保險備妥教育金
+          .box
+            .item
+              .item-title 經濟日報網2
+              .info 英國保誠人壽調查：逾7成家長用保險準備教育金
+            .item
+              .item-title 經濟日報網2
+              .info 調查：準備教育基金 家長今年偏愛投資型保單
+            .item
+              .item-title 自由時報2
+              .info 從小讀私校、出國留學費用破千萬 調查：7成家長用保險備妥教育金
 
     section.section08
       .container
-        .title 得獎公告
-          span -
+        .title(isShow="0") 得獎公告
+          span ＋
         .info-box
           .row
             .sub-title 第一重 預約禮
@@ -420,8 +435,8 @@ block body
             .sub-title 第二重 投保禮
             .txt 活動獎項將於2023年01月31日前以電腦隨機方式抽出得獎者，得獎名單將公告於本活動網頁此處 ，並於公告後兩週內以手機簡訊方式發送咖啡券電子序號及兌換方式給中獎者，請中獎者於指定之期限內完成領獎手續，若逾時未回覆或未提供正確資訊以供聯繫者，視同放棄。本活動若有變動將於本活動網頁公告，不另行通知。
       .container
-        .title 活動辦法
-          span -
+        .title(isShow="0") 活動辦法
+          span ＋
         .info-box
           .row
             .dot •主辦單位
@@ -443,8 +458,8 @@ block body
               br
               | 本活動須透過保誠人壽活動網站或「我的幸福我做主」保險顧問媒合平台參加。同時間參加其他保誠人壽活動視各活動內容而定，保誠人壽保有活動資格審核權利。
       .container
-        .title 點開看完整活動注意事項
-          span -
+        .title(isShow="0") 點開看完整活動注意事項
+          span ＋
         .info-box
           .row
             .dot.txt •本活動參加者於參加本活動之同時，即同意接受本活動之活動辦法及注意事項。

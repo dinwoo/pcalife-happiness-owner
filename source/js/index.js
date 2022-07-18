@@ -11,9 +11,10 @@ function verifyNumber(number) {
   return numberRules.test(number);
 }
 
-function verifyId(id) {
-  const idRules = /^[A-Za-z]{1}[1-2]{1}[0-9]{8}$/;
-  return idRules.test(id);
+function verifyEmail(email) {
+  const emailRules =
+    /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+  return emailRules.test(email);
 }
 
 function checkWid(windowSize) {
@@ -46,55 +47,75 @@ function ValidateValue(textbox) {
 
 function setAnimate() {
   TweenMax.set(
-    ".banner .banner-title,.section01 .title,.section01 .pic,.section02 .title img,.section02 .container,.section03 .title img,.section03 .animate-item,.section04 .wrapper,.section05 .title img,.section05 .form-box,.section06 .title img,.section06 .remind,.section06 .box .item",
+    ".banner .title,.banner .kv,.banner .dialogue1,.banner .dialogue2,.section02 .title,.section02 .container,.section03 .main,.section03 .btn,.section04 .title,.section05 .title,.section06 .title,.section06 .item,.section06 .btn,.section07 .title,.section07 .main",
     {
       opacity: 0,
       y: 50,
     }
   );
-  TweenMax.set(".banner .banner-slogan,.banner .dog-box", {
-    opacity: 0,
-  });
-  TweenMax.set(".banner .dadnmom", {
-    opacity: 0,
-    x: -100,
-  });
-  TweenMax.set(".banner .papamama", {
-    opacity: 0,
-    x: 100,
-  });
+
+  TweenMax.set(
+    ".banner .slogan .icon,.banner .slogan p,.section01 .box:nth-child(1),.section04 .box .item:nth-child(1),.section05 .box .item:nth-child(1)",
+    {
+      opacity: 0,
+      x: -50,
+    }
+  );
+
+  TweenMax.set(
+    ".banner .slogan .btn,.section01 .box:nth-child(2),.section04 .box .item:nth-child(2),.section05 .box .item:nth-child(2)",
+    {
+      opacity: 0,
+      x: 50,
+    }
+  );
 
   // 進場動畫
   doAnimate(
     new TimelineMax()
       .add(
-        TweenMax.to(".banner .banner-title", 0.6, {
+        TweenMax.to(".banner .title", 0.6, {
           opacity: 1,
           y: 0,
         })
       )
       .add(
-        TweenMax.to(".banner .dadnmom", 0.6, {
+        TweenMax.to(".banner .kv", 0.6, {
+          opacity: 1,
+          y: 0,
+        })
+      )
+      .add(
+        TweenMax.to(".banner .dialogue1", 0.6, {
+          opacity: 1,
+          y: 0,
+        })
+      )
+      .add(
+        TweenMax.to(".banner .dialogue2", 0.6, {
+          opacity: 1,
+          y: 0,
+          delay: -0.4,
+        })
+      )
+      .add(
+        TweenMax.to(".banner .slogan .icon", 0.6, {
           opacity: 1,
           x: 0,
         })
       )
       .add(
-        TweenMax.to(".banner .papamama", 0.6, {
+        TweenMax.to(".banner .slogan p", 0.6, {
           opacity: 1,
           x: 0,
           delay: -0.6,
         })
       )
       .add(
-        TweenMax.to(".banner .banner-slogan", 1, {
+        TweenMax.to(".banner .slogan .btn", 0.6, {
           opacity: 1,
-        })
-      )
-      .add(
-        TweenMax.to(".banner .dog-box", 0.6, {
-          opacity: 1,
-          delay: 0.1,
+          x: 0,
+          delay: -0.6,
         })
       ),
     {
@@ -103,6 +124,194 @@ function setAnimate() {
       reverse: false, //動畫重複 default:true
     },
     "banner"
+  );
+
+  doAnimate(
+    new TimelineMax()
+      .add(
+        TweenMax.to(".section01 .box:nth-child(1)", 0.6, {
+          opacity: 1,
+          x: 0,
+        })
+      )
+      .add(
+        TweenMax.to(".section01 .box:nth-child(2)", 0.6, {
+          opacity: 1,
+          x: 0,
+          delay: -0.6,
+        })
+      ),
+    {
+      triggerElement: ".section01",
+      offset: 0, //指標位移
+      reverse: false, //動畫重複 default:true
+    },
+    "section01"
+  );
+
+  doAnimate(
+    new TimelineMax()
+      .add(
+        TweenMax.to(".section02 .title", 0.6, {
+          opacity: 1,
+          y: 0,
+        })
+      )
+      .add(
+        TweenMax.staggerTo(
+          ".section02 .container",
+          0.6,
+          {
+            opacity: 1,
+            y: 0,
+          },
+          0.1
+        )
+      ),
+    {
+      triggerElement: ".section02",
+      offset: 0, //指標位移
+      reverse: false, //動畫重複 default:true
+    },
+    "section02"
+  );
+
+  doAnimate(
+    new TimelineMax()
+      .add(
+        TweenMax.to(".section03 .main", 0.6, {
+          opacity: 1,
+          y: 0,
+        })
+      )
+      .add(
+        TweenMax.to(".section03 .btn", 0.6, {
+          opacity: 1,
+          y: 0,
+          delay: -0.4,
+        })
+      ),
+    {
+      triggerElement: ".section03",
+      offset: 0, //指標位移
+      reverse: false, //動畫重複 default:true
+    },
+    "section03"
+  );
+
+  doAnimate(
+    new TimelineMax()
+      .add(
+        TweenMax.to(".section04 .title", 0.6, {
+          opacity: 1,
+          y: 0,
+        })
+      )
+      .add(
+        TweenMax.to(".section04 .box .item:nth-child(1)", 0.6, {
+          opacity: 1,
+          x: 0,
+          delay: -0.2,
+        })
+      )
+      .add(
+        TweenMax.to(".section04 .box .item:nth-child(2)", 0.6, {
+          opacity: 1,
+          x: 0,
+          delay: -0.6,
+        })
+      ),
+    {
+      triggerElement: ".section04",
+      offset: 0, //指標位移
+      reverse: false, //動畫重複 default:true
+    },
+    "section04"
+  );
+
+  doAnimate(
+    new TimelineMax()
+      .add(
+        TweenMax.to(".section05 .title", 0.6, {
+          opacity: 1,
+          y: 0,
+        })
+      )
+      .add(
+        TweenMax.to(".section05 .box .item:nth-child(1)", 0.6, {
+          opacity: 1,
+          x: 0,
+          delay: -0.2,
+        })
+      )
+      .add(
+        TweenMax.to(".section05 .box .item:nth-child(2)", 0.6, {
+          opacity: 1,
+          x: 0,
+          delay: -0.6,
+        })
+      ),
+    {
+      triggerElement: ".section05",
+      offset: 0, //指標位移
+      reverse: false, //動畫重複 default:true
+    },
+    "section05"
+  );
+
+  doAnimate(
+    new TimelineMax()
+      .add(
+        TweenMax.to(".section06 .title", 0.6, {
+          opacity: 1,
+          y: 0,
+        })
+      )
+      .add(
+        TweenMax.staggerTo(
+          ".section06 .item",
+          0.6,
+          {
+            opacity: 1,
+            y: 0,
+          },
+          0.2
+        )
+      )
+      .add(
+        TweenMax.to(".section06 .btn", 0.6, {
+          opacity: 1,
+          y: 0,
+        })
+      ),
+    {
+      triggerElement: ".section06",
+      offset: 0, //指標位移
+      reverse: false, //動畫重複 default:true
+    },
+    "section06"
+  );
+
+  doAnimate(
+    new TimelineMax()
+      .add(
+        TweenMax.to(".section07 .title", 0.6, {
+          opacity: 1,
+          y: 0,
+        })
+      )
+      .add(
+        TweenMax.to(".section07 .main", 0.6, {
+          opacity: 1,
+          y: 0,
+        })
+      ),
+    {
+      triggerElement: ".section07",
+      offset: 0, //指標位移
+      reverse: false, //動畫重複 default:true
+    },
+    "section07"
   );
 }
 
@@ -124,9 +333,20 @@ function sweetAlertError(msg) {
   return false;
 }
 
+function scrollToReserve() {
+  $("html,body")
+    .stop()
+    .animate(
+      {
+        scrollTop: $(".section05").offset().top - 100,
+      },
+      700
+    );
+}
+
 $(document).ready(function () {
   checkWid($(window).width());
-  // setAnimate();
+  setAnimate();
 
   let infoOwl = $("#carouselBox02").owlCarousel({
     nav: false,
@@ -169,17 +389,17 @@ $(document).ready(function () {
     if (!$("#name").val()) {
       sweetAlertError("請填寫姓名");
       return;
+    } else if ($("input[name='gender']:checked").val() == undefined) {
+      sweetAlertError("請選擇性別");
+      return;
+    } else if (!$("#email").val() || !verifyEmail($("#email").val())) {
+      sweetAlertError("請填寫Email及確認格式正確");
+      return;
     } else if (!$("#phone").val() || !verifyNumber($("#phone").val())) {
       sweetAlertError("請填寫電話及確認格式正確");
       return;
-    } else if ($("input[name='isPcalife']:checked").val() == undefined) {
-      sweetAlertError("請確認是否已經是保誠保戶");
-      return;
-    } else if (
-      $("input[name='isPcalife']:checked").val() == "1" &&
-      (!$("#identityNumber").val() || !verifyId($("#identityNumber").val()))
-    ) {
-      sweetAlertError("請輸入身分證字號及確認格式正確");
+    } else if (!$("#verification").val()) {
+      sweetAlertError("請輸入驗證碼");
       return;
     } else if (!$("#personalInformation").is(":checked")) {
       sweetAlertError("請閱讀並同意個人資料告知暨同意事項");
@@ -189,35 +409,23 @@ $(document).ready(function () {
       return;
     }
     $.ajax({
-      url: "Home/Index",
+      url: "",
       type: "post",
       data: {
         name: $("#name").val(),
+        gender: $("input[name='gender']:checked").val(),
+        email: $("#email").val(),
         phone: $("#phone").val(),
-        isPcalife: $("input[name='isPcalife']:checked").val(),
-        identityNumber: $("#identityNumber").val(),
-        currentAge,
-        retireAge,
-        lifeSpan,
-        totalAssets,
-        salary,
-        incomeReplacementRatio,
-        inflation,
-        totalInvest,
-        requiredAmount: calcRequiredAmount(),
-        shortage: calcShortage(),
-        rspResult: calcPMT(),
       },
       success: function (e) {
         console.log(e);
         if (e.code === 200) {
-          Swal.fire({
-            icon: "success",
-            title: "成功送出資料",
-          });
+          $(".section05 .success-popup").fadeIn();
           $("#name").val("");
+          $("input[name='gender']").prop("checked", false);
+          $("#email").val("");
           $("#phone").val("");
-          $("#identityNumber").val("");
+          $("#verification").val("");
           $("#personalInformation").prop("checked", false);
           $("#checkBtn").prop("checked", false);
         }
@@ -241,5 +449,36 @@ $(document).ready(function () {
         sweetAlertError("送出失敗");
       },
     });
+  });
+
+  $(".fix-btn").on("click", scrollToReserve);
+  $(".banner .btn").on("click", scrollToReserve);
+  $(".section01 .btn").on("click", scrollToReserve);
+  $(".section03 .btn").on("click", scrollToReserve);
+  $(".section06 .btn").on("click", scrollToReserve);
+
+  $(".section07 .tab").on("click", function () {
+    const index = $(this).index();
+    $(".section07 .tab").removeClass("active");
+    $(".section07 .tab").eq(index).addClass("active");
+    $(".section07 .box").removeClass("active");
+    $(".section07 .box").eq(index).addClass("active");
+  });
+
+  $(".section08 .title").on("click", function () {
+    const isShow = Number($(this).attr("isShow"));
+    if (isShow) {
+      $(this).next().slideUp();
+      $(this).attr("isShow", 0);
+      $(this).find("span").text("＋");
+    } else {
+      $(this).next().slideDown();
+      $(this).attr("isShow", 1);
+      $(this).find("span").text("－");
+    }
+  });
+
+  $(".success-popup .close").on("click", function () {
+    $(".section05 .success-popup").fadeOut();
   });
 });
