@@ -219,7 +219,7 @@
                     <p>姓 名<span class="remark">*</span></p>
                   </div>
                   <div class="row-content">
-                    <input id="name" type="text" name="name" autocomplete="off">
+                    <input id="name" type="text" name="name" placeholder="請輸入真實中文正楷姓名" autocomplete="off">
                   </div>
                 </div>
                 <div class="row">
@@ -241,18 +241,10 @@
                 </div>
                 <div class="row">
                   <div class="row-label">
-                    <p>Email<span class="remark">*</span></p>
-                  </div>
-                  <div class="row-content">
-                    <input id="email" type="text" name="email" autocomplete="off">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="row-label">
                     <p>手 機<span class="remark">*</span></p>
                   </div>
                   <div class="row-content">
-                    <input id="phone" type="phone" name="phone" maxLength="10" placeholder="手機格式：0911222333 | 家電格式：0233334444" autocomplete="off">
+                    <input id="phone" type="phone" name="phone" maxLength="10" placeholder="範例：0911222333" autocomplete="off">
                   </div>
                 </div>
                 <div class="row">
@@ -260,7 +252,7 @@
                     <p>請輸入驗證碼<span class="remark">*</span></p>
                   </div>
                   <div class="row-content">
-                    <input id="code" type="text" name="code" autocomplete="off">
+                    <input id="code" type="text" name="code" placeholder="請輸入驗證碼" autocomplete="off">
                   </div>
                 </div>
                 <div class="canvas-box"><img id="imgcode" src="@ViewData['captcha64']">
