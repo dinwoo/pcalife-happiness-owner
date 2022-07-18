@@ -6,6 +6,15 @@ $(window).resize(function () {
   checkWid(windowSize);
 });
 
+function mobile() {
+  try {
+    document.createEvent("TouchEvent");
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
 function verifyNumber(number) {
   const numberRules = /^[0-9]*$/;
   return numberRules.test(number);
@@ -362,7 +371,6 @@ $(document).ready(function () {
       $("#infoLeftArrow").addClass("disabled");
     },
     onChanged: (event) => {
-      console.log(event.page.index);
       if (event.page.index >= 0) {
         $("#infoNowPage").text(`0${event.page.index + 1}`);
         $(".section02 .title-box").fadeOut();
@@ -398,7 +406,7 @@ $(document).ready(function () {
     } else if (!$("#phone").val() || !verifyNumber($("#phone").val())) {
       sweetAlertError("請填寫電話及確認格式正確");
       return;
-    } else if (!$("#verification").val()) {
+    } else if (!$("#code").val()) {
       sweetAlertError("請輸入驗證碼");
       return;
     } else if (!$("#personalInformation").is(":checked")) {
@@ -409,13 +417,20 @@ $(document).ready(function () {
       return;
     }
     $.ajax({
-      url: "",
+      url: "Home/Index",
       type: "post",
       data: {
         name: $("#name").val(),
-        gender: $("input[name='gender']:checked").val(),
+        gender: Number($("input[name='gender']:checked").val()),
         email: $("#email").val(),
         phone: $("#phone").val(),
+        deviceType: mobile() ? 2 : 1,
+      },
+      beforeSend: function (xhr) {
+        xhr.setRequestHeader(
+          "requestverificationtoken",
+          $('input:hidden[name="__RequestVerificationToken"]').val()
+        );
       },
       success: function (e) {
         console.log(e);
@@ -425,7 +440,7 @@ $(document).ready(function () {
           $("input[name='gender']").prop("checked", false);
           $("#email").val("");
           $("#phone").val("");
-          $("#verification").val("");
+          $("#code").val("");
           $("#personalInformation").prop("checked", false);
           $("#checkBtn").prop("checked", false);
         }
@@ -456,6 +471,27 @@ $(document).ready(function () {
   $(".section01 .btn").on("click", scrollToReserve);
   $(".section03 .btn").on("click", scrollToReserve);
   $(".section06 .btn").on("click", scrollToReserve);
+
+  $("#toSection3").on("click", () => {
+    $("html,body")
+      .stop()
+      .animate(
+        {
+          scrollTop: $(".section03").offset().top - 50,
+        },
+        700
+      );
+  });
+  $("#toSection6").on("click", () => {
+    $("html,body")
+      .stop()
+      .animate(
+        {
+          scrollTop: $(".section06").offset().top - 100,
+        },
+        700
+      );
+  });
 
   $(".section07 .tab").on("click", function () {
     const index = $(this).index();
