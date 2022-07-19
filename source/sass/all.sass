@@ -341,7 +341,7 @@ html
           transform: translateY(-80%)
           .title
             +titleStyle($red02,-8px,-20px)
-            padding: 0.5rem 2rem
+            padding: 0.5rem 2rem 1rem
             p
               text-align: center
               font-size: 2.3rem
@@ -424,6 +424,11 @@ html
                     margin: 0
                   figure.pic2
                     width: 17.5%
+                    img
+                      &:nth-child(1)
+                        display: block
+                      &:nth-child(2)
+                        display: none
             &.container3
               .box
                 .chart-box
@@ -449,7 +454,6 @@ html
           .title-box
             transform: translateY(-60%)
             .title
-              padding: 0.5rem 2rem 1rem
               p
                 font-size: 1.6rem
                 span.big
@@ -490,9 +494,8 @@ html
               &.container2
                 .box
                   .chart-box
-                    justify-content: space-around
                     figure.pic
-                      width: 80%
+                      width: 76%
                     figure.pic2
                       width: 20%
               &.container3
@@ -555,8 +558,13 @@ html
                     figure.pic
                       width: 100%
                     figure.pic2
-                      width: 40%
-                      margin: auto
+                      width: 80%
+                      margin: 15px auto 0
+                      img
+                        &:nth-child(1)
+                          display: none
+                        &:nth-child(2)
+                          display: block
               &.container3
                 .box
                   .chart-box
