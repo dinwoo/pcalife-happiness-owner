@@ -1,0 +1,449 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type">
+    <link rel="icon" target="_blank" href="~/images/favicon.ico">
+    <title>我的幸福我作主</title>
+    <link target="_blank" href="~/css/owl.carousel.min.css" rel="stylesheet">
+    <link target="_blank" href="~/css/owl.theme.default.min.css" rel="stylesheet">
+    <link target="_blank" href="~/css/jquery-ui.min.css" rel="stylesheet">
+    <link target="_blank" href="~/css/sweetalert2.min.css" rel="stylesheet">
+    <link target="_blank" href="~/css/all.css?a=1" rel="stylesheet">
+</head>
+<body>
+    @Html.AntiForgeryToken()
+    <header>
+        <figure class="logo"><img src="~/images/logo.png"></figure>
+        <div class="box">
+            <p class="txt" id="toSection3">子女教育金準備五大心法</p>
+            <p class="txt" id="toSection6">子女教育準備必備商品</p>
+
+            <iframe src="@ViewData[" FbShare"]" width="60" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <div class="line-it-button" data-lang="zh_Hant" data-type="share-a" data-env="REAL" data-url="@ViewData[" LineShare"]" data-color="default" data-size="small" data-count="false" data-ver="3" style="display: none;"></div>
+            <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+        </div>
+    </header>
+    <article>
+        <section class="banner">
+            <div class="main">
+                <figure class="title"><img src="~/images/banner-title.png"></figure>
+                <figure class="kv"><img src="~/images/banner-kv.png"></figure>
+                <div class="dialogue dialogue1">你知道大家都是如何<br>儲備子女教育金的嗎?</div>
+                <div class="dialogue dialogue2">你有算過該為孩子<br>準備多少教育基金嗎?</div>
+            </div>
+            <div class="slogan" style=" position: fixed; z-index: 999; width: 100%; bottom: -1px;">
+                <figure class="icon"><img src="~/images/banner-slogan-icon.png"></figure>
+                <p>保誠人壽和你一起儲備子女教育金</p>
+                <figure class="btn"><img src="~/images/banner-slogan-btn.png"></figure>
+            </div>
+        </section>
+        <section class="section01">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="box">
+                        <div class="item">
+                            <figure class="pic"><img src="~/images/section01-pic01.png"></figure>
+                            <p class="school-info">私立學校</p>
+                            <p class="school-info">新台幣<span class="num">1,055</span>萬元</p>
+                        </div>
+                        <div class="item">
+                            <figure class="pic"><img src="~/images/section01-pic02.png"></figure>
+                            <p class="school-info">公立學校</p>
+                            <p class="school-info">新台幣<span class="num">154</span>萬元</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <p class="txt">根據教育部統計處公布資料，</p>
+                        <p class="txt">一個孩子從幼稚園至研究所畢業所需的教育費用，</p>
+                        <p class="txt">會因應<span class="blue">公</span>、<span class="green">私</span>立及國內、外學校的選擇，</p>
+                        <p class="txt">會有近<span class="red">7</span>倍的差距！</p>
+                        <figure class="btn"><img src="~/images/section01-btn.png"></figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section02">
+            <div class="wrapper">
+                <div class="title-box title1">
+                    <div class="title">
+                        <div class="decorate">
+                            <div class="t-dot">“</div>
+                            <div class="b-dot">”</div>
+                        </div>
+                        <p>請問您有提早</p>
+                        <p>為子女準備<span class="red big">教育金</span>了嗎？</p>
+                    </div>
+                </div>
+                <div class="title-box title2">
+                    <div class="title">
+                        <div class="decorate">
+                            <div class="t-dot">“</div>
+                            <div class="b-dot">”</div>
+                        </div>
+                        <p>在一位子女身上</p>
+                        <p>您認為應該準備多少<span class="red big">教育金</span>?</p>
+                    </div>
+                </div>
+                <div class="title-box title3">
+                    <div class="title">
+                        <div class="decorate">
+                            <div class="t-dot">“</div>
+                            <div class="b-dot">”</div>
+                        </div>
+                        <p>在子女教育基金準備上</p>
+                        <p><span class="red">傾向</span>於哪種<span class="red big">投資回報關係</span>?</p>
+                    </div>
+                </div>
+                <div class="title-box title4">
+                    <div class="title">
+                        <div class="decorate">
+                            <div class="t-dot">“</div>
+                            <div class="b-dot">”</div>
+                        </div>
+                        <p>您目前使用哪些<span class="red big">金融工具</span></p>
+                        <p>準備子女教育金?</p>
+                    </div>
+                </div>
+                <div class="title-box title5">
+                    <div class="title">
+                        <div class="decorate">
+                            <div class="t-dot">“</div>
+                            <div class="b-dot">”</div>
+                        </div>
+                        <p>您用<span class="red big">哪類保險</span></p>
+                        <p>來準備教育基金?</p>
+                    </div>
+                </div>
+                <div class="arrow" id="infoLeftArrow">
+                    <p><</p>
+                </div>
+                <div class="arrow" id="infoRightArrow">
+                    <p>></p>
+                </div>
+                <div class="carousel-box owl-carousel" id="carouselBox02">
+                    <div class="container container1">
+                        <div class="box">
+                            <p class="txt">近<span class="red big">六</span><span class="red">成</span>家長表示已<span class="red">開始</span>為子女準備<span class="red">教育基金</span>，<br>其中，超過<span class="red">近</span><span class="red big">四</span><span class="red">成</span>的家長願意投入家庭收入的11~20%作為教育經費。</p>
+                            <div class="chart-box">
+                                <figure class="pic"><img src="~/images/section02-pic01.png"></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container container2">
+                        <div class="box">
+                            <p class="txt">相較2021年，<br>近<span class="red big">六</span><span class="red">成</span>家長願意為子女投入<span class="red big">300</span><span class="red">萬</span>元以上的教育經費。</p>
+                            <div class="chart-box">
+                                <figure class="pic"><img src="~/images/section02-pic02.png"></figure>
+                                <figure class="pic2"><img src="~/images/section02-pic02-2.png"></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container container3">
+                        <div class="box">
+                            <p class="txt"><span class="red">多數</span>家長仍傾向選擇<span class="red">長期投入</span>，分期領取回報的理財工具為孩子準備教育基金。</p>
+                            <div class="chart-box">
+                                <figure class="pic"><img src="~/images/section02-pic03.png"></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container container4">
+                        <div class="box">
+                            <p class="txt">逾<span class="red">七成</span>家長偏好使用<span class="green">低風險</span>的<span class="green">定存儲蓄</span>及<span class="green">保險商品</span>以準備子女教育金<br>其中，選擇保險商品的家長則<span class="red">超過五成</span></p>
+                            <div class="chart-box">
+                                <figure class="pic"><img src="~/images/section02-pic04.png"></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container container5">
+                        <div class="box">
+                            <p class="txt">近<span class="red">五成</span>家長仍偏好使用<span class="green">分紅保單</span>準備教育金，<span class="green">投資型保單</span>相較於2020年成長<span class="red">逾25%</span>。<br>顯示多數家長偏好長期持有，同時滿足<span class="red">投資</span>與<span class="red">保障</span>的雙重需求。</p>
+                            <div class="chart-box">
+                                <figure class="pic"><img src="~/images/section02-pic05.png"></figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="remind">資料來源：保誠人壽2020～2022年子女教育金準備調查</div>
+        </section>
+        <section class="section03">
+            <div class="wrapper">
+                <figure class="main"><img src="~/images/section03-main.png"></figure>
+                <figure class="btn"><img src="~/images/section03-btn.png"></figure>
+            </div>
+        </section>
+        <section class="section04">
+            <div class="wrapper">
+                <div class="title-box">
+                    <div class="title">
+                        <div class="decorate">
+                            <div class="t-dot">“</div>
+                            <div class="b-dot">”</div>
+                        </div>
+                        <p>免費預約<span class="green">享好禮</span></p>
+                        <figure class="gift-pic"><img src="~/images/section04-gift.png"></figure>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="item">
+                        <div class="item-title">第一重 預約禮</div>
+                        <div class="txt">即日起至2022年12月31日止，當月成功預約並經顧問確認有諮詢事實，即可參與次月之抽獎活動，活動獎項將於2022年9月~2023年1月，每月的15日前以電腦隨機方式抽出40份「兩大超商二選一200元購物金」，共計200份。活動期間內每人限1次中獎機會。</div>
+                        <figure class="pic"><img src="~/images/section04-pic01.png"></figure>
+                    </div>
+                    <div class="item">
+                        <div class="item-title">第二重 投保禮</div>
+                        <div class="txt">即日起至2022年12月31日止，預約顧問諮詢並投保成功，即有機會獲得「3,000元多選一福利即享券」，12大品牌擇一使用，每人限1次中獎機會，共計將抽出10名。</div>
+                        <figure class="pic"><img src="~/images/section04-pic02.png"></figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section05">
+            <div class="wrapper">
+                <div class="title-box">
+                    <div class="title">
+                        <div class="decorate">
+                            <div class="t-dot">“</div>
+                            <div class="b-dot">”</div>
+                        </div>
+                        <p>免費<span class="orange">預約方式</span></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="item">
+                        <div class="item-title">請<span class="orange">與我聯絡</span></div>
+                        <div class="form-box">
+                            <div class="row">
+                                <div class="row-label">
+                                    <p>姓 名<span class="remark">*</span></p>
+                                </div>
+                                <div class="row-content">
+                                    <input id="name" type="text" name="name" placeholder="請輸入真實中文正楷姓名" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="row-label">
+                                    <p>性 別<span class="remark">*</span></p>
+                                </div>
+                                <div class="row-content">
+                                    <div class="radio-box">
+                                        <label>
+                                            <input type="radio" name="gender" value="1">
+                                            <p>男</p>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="gender" value="2">
+                                            <p>女</p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="row-label">
+                                    <p>手 機<span class="remark">*</span></p>
+                                </div>
+                                <div class="row-content">
+                                    <input id="phone" type="phone" name="phone" maxLength="10" placeholder="範例：0911222333" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="row-label">
+                                    <p>請輸入驗證碼<span class="remark">*</span></p>
+                                </div>
+                                <div class="row-content">
+                                    <input id="code" type="text" name="code" placeholder="請輸入驗證碼" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="canvas-box">
+                                <img id="imgcode" src="@ViewData[" captcha64"]">
+                                <p class="reload" onclick="ReloadCode()">重新整理</p>
+                            </div>
+                            <div class="row align-center">
+                                <input id="personalInformation" type="checkbox">
+                                <p class="txt">我已閱讀並同意<a target="_blank" href="@ViewData[" Policy"]"><span id="privacyBtn">個人資料告知暨同意事項</span></a></p>
+                            </div>
+                            <div class="row align-center">
+                                <input id="checkBtn" type="checkbox">
+                                <p class="txt">我已確認以上資料正確無誤 </p>
+                            </div>
+                        </div>
+                        <figure class="btn1" id="sendBtn"><img src="~/images/section05-btn01.png"></figure>
+                        <div class="success-popup">
+                            <div class="main">
+                                <div class="close">
+                                    <div class="close-btn"></div>
+                                    <p>關閉</p>
+                                </div>
+                                <div class="info">您的資料已成功送出，系統將於<br>「我的幸福我做主」保險顧問媒合平台<br>為您創建專屬帳號，<br>後續將由專業顧問與您聯繫諮詢，<br>感謝您的耐心等待。</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-title">我想<span class="orange">自己挑顧問</span></div>
+                        <div class="remind">依個人需求量身篩選，輸入條件、快速篩選、<br>無壓力媒合，簡單三步驟，找到最懂你的<span class="red">保險顧問</span></div>
+                        <figure class="pic"><a href="@ViewData[" OMO"]"><img src="~/images/section05-pic.png"></a> </figure>
+                        <figure class="btn2"><a href="@ViewData[" OMO"]"><img src="~/images/section05-btn02.png"></a> </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section06">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="title-box">
+                        <div class="title">
+                            <div class="decorate">
+                                <div class="t-dot">“</div>
+                                <div class="b-dot">”</div>
+                            </div>
+                            <p><span class="yellow">子女教育金準備</span>必備商品</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="item">
+                            <div class="num">01</div>
+                            <figure class="pic"><img src="~/images/section06-pic01.png"></figure>
+                            <div class="item-title">保誠人壽<br>萬事利達外幣終身壽險</div>
+                            <p class="txt">美元貨幣，資產多元<br>英式分紅，累積保額<br>6年繳費，終身保障</p>
+                        </div>
+                        <div class="item">
+                            <div class="num">02</div>
+                            <figure class="pic"><img src="~/images/section06-pic02.png"></figure>
+                            <div class="item-title">保誠人壽<br>一路發外幣終身保險</div>
+                            <p class="txt">年年領，入袋安心<br>享紅利，步步高升<br>有靠山，失能無憂</p>
+                        </div>
+                        <div class="item">
+                            <div class="num">03</div>
+                            <figure class="pic"><img src="~/images/section06-pic03.png"></figure>
+                            <div class="item-title">保誠人壽<br>彩色人生外幣終身壽險</div>
+                            <p class="txt">高額保障，圓夢彩色人生<br>雙重紅利，安心規劃退休<br>分期給付，彈性資產傳承</p>
+                        </div>
+                    </div>
+                    <figure class="btn"><img src="~/images/section06-btn.png"></figure>
+                </div>
+            </div>
+        </section>
+        <section class="section07">
+            <div class="wrapper">
+                <div class="title-box">
+                    <div class="title">
+                        <div class="decorate">
+                            <div class="t-dot">“</div>
+                            <div class="b-dot">”</div>
+                        </div>
+                        <p>子女教育金<span class="green">相關報導</span></p>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="tab-box">
+                        <div class="tab active">新聞曝光</div>
+                        <div class="tab">專家推薦</div>
+                    </div>
+                    <div class="box active">
+                        <a class="item" target="_blank" href="@ViewData[" News1"]">
+                            <div class="item-title">經濟日報網</div>
+                            <div class="info">英國保誠人壽調查：逾7成家長用保險準備教育金</div>
+                        </a><a class="item" target="_blank" href="@ViewData[" News2"]">
+                            <div class="item-title">經濟日報網</div>
+                            <div class="info">調查：準備教育基金 家長今年偏愛投資型保單</div>
+                        </a><a class="item" target="_blank" href="@ViewData[" News3"]">
+                            <div class="item-title">自由時報</div>
+                            <div class="info">從小讀私校、出國留學費用破千萬 調查：7成家長用保險備妥教育金</div>
+                        </a>
+                    </div>
+                    <div class="box">
+                        <a class="item" target="_blank" href="@ViewData[" Recommend1"]">
+                            <div class="item-title">標題1</div>
+                            <div class="info">內容1</div>
+                        </a><a class="item" target="_blank" href="@ViewData[" Recommend2"]">
+                            <div class="item-title">標題2</div>
+                            <div class="info">內容2</div>
+                        </a><a class="item" target="_blank" href="@ViewData[" Recommend3"]">
+                            <div class="item-title">標題3</div>
+                            <div class="info">內容3</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section08">
+            <div class="container">
+                <div class="title" isShow="0">得獎公告<span>＋</span></div>
+                <div class="info-box">
+                    <div class="row">
+                        <div class="sub-title">第一重 預約禮</div>
+                        <div class="txt">當月成功預約並經顧問確認有諮詢事實，即可參與次月之抽獎活動，活動獎項將於2022年9月~2023年1月，每月的15日前以電腦隨機方式抽出40份「兩大超商二選一200元購物金」 ，共計200份。活動期間內每人限1次中獎機會。得獎名單將公告於本活動網頁<a target="_blank" href="@ViewData[" Price1"]">此處</a>，並於公告後兩週內以手機簡訊方式發送「兩大超商二選一200元購物金」電子序號及兌換方式給中獎者，請中獎者於指定之期限內完成領獎手續，若逾時未回覆或未提供正確資訊以供聯繫者，視同放棄。本活動若有變動將於本活動網頁公告，不另行通知。</div>
+                    </div>
+                    <div class="row">
+                        <div class="sub-title">第二重 投保禮</div>
+                        <div class="txt">活動獎項將於2023年1月31日前以電腦隨機方式抽出得獎者，得獎名單將公告於本活動網頁<a target="_blank" href="@ViewData[" Price2"]">此處</a>，並於公告後兩週內以手機簡訊方式發送「3,000元多選一福利即享券」電子序號及兌換方式給中獎者，請中獎者於指定之期限內完成領獎手續，若逾時未回覆或未提供正確資訊以供聯繫者，視同放棄。本活動若有變動將於本活動網頁公告，不另行通知。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="title" isShow="0">活動辦法<span>＋</span></div>
+                <div class="info-box">
+                    <div class="row">
+                        <div class="dot">•主辦單位</div>
+                        <div class="txt">保誠人壽保險股份有限公司 (下稱「保誠人壽」)</div>
+                    </div>
+                    <div class="row">
+                        <div class="dot">•活動期間</div>
+                        <div class="txt">自2022年8月1日起至2022年12月31日止。活動時間以保誠人壽網站伺服器時間為準。</div>
+                    </div>
+                    <div class="row">
+                        <div class="dot">•參加對象</div>
+                        <div class="txt">限設籍中華民國之本國公民，年齡 20 歲(含)以上且未受監護或輔助宣告者。</div>
+                    </div>
+                    <div class="row">
+                        <div class="sub-title">第一重 預約禮</div>
+                        <div class="txt">活動期間內於<a target="_blank" href="@ViewData[" Activity1"]">本活動網頁</a>或<a target="_blank" href="@ViewData[" Activity_OMO1"]">「我的幸福我做主」保險顧問媒合平台</a>，當月成功預約並經顧問確認有諮詢事實，即可參與次月之抽獎活動，活動獎項將於2022年9月~2023年1月，每月的15日前以電腦隨機方式抽出40份「兩大超商二選一200元購物金」，共計200份。活動期間內每人限一次中獎機會，若手機號碼相同將視為同一預約者。</div>
+                    </div>
+                    <div class="row">
+                        <div class="sub-title">第二重 投保禮</div>
+                        <div class="txt">活動期間內於<a target="_blank" href="@ViewData[" Activity2"]">本活動網頁</a>或<a target="_blank" href="@ViewData[" Activity_OMO2"]">「我的幸福我做主」保險顧問媒合平台</a>，預約顧問諮詢並透過大誠保經通路成功投保，於抽獎日當日該保單屬有效且於抽獎前無撤銷、解約等情事，即可參加本抽獎活動，將有機會獲得「3,000元多選一福利即享券」，12大品牌擇一使用，每人限一次中獎機會，共計將抽出十名。<br><br>「3,000元多選一福利即享券」為無效期餘額型，可分次抵用，12大品牌擇一使用(家樂福、遠東SOGO百貨、遠東百貨、王品集團、7-ELEVEN 、屈臣氏、統一時代百貨台北店、遠東巨城購物中心、大潤發、台北101、漢神百貨/漢神巨蛋、特力集團)，一但選定品牌，限全額度單一品牌兌換使用。<br /><br />本活動須透過保誠人壽活動網站或「我的幸福我做主」保險顧問媒合平台參加。同時間參加其他保誠人壽活動視各活動內容而定，保誠人壽保有活動資格審核權利。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="title" isShow="0">點開看完整活動注意事項<span>＋</span></div>
+                <div class="info-box">
+                    <div class="row">
+                        <div class="dot txt">•本活動參加者於參加本活動之同時，即同意接受本活動之活動辦法及注意事項。</div>
+                        <div class="dot txt">•本活動獎項之照片、圖案僅供參考；獎項如遇缺貨或不可抗力之因素無法提供時，主辦單位有權以其他等值品替代，得獎者不得要求轉換、轉讓或折換現金。</div>
+                        <div class="dot txt">•依中華民國稅法規定，其年度機會中獎金額(價值)累計達新臺幣1,000元以上者，需依法繳交身分證影本供保誠人壽申報所得等稅務作業使用，並將以新台幣計價列入當年度之個人綜合所得稅申報；中獎金額(價值)達新臺幣20,010元以上者，中獎者依法需自付10%稅金(若中獎者為非境內居住個人或無固定營業場所營利事業為20%稅金)，並於領獎截止日前依領獎辦法規定填寫並繳交相關資料。因參加本活動而須支付任何稅捐皆為活動得獎者之義務，概與保誠人壽無關。前述稅捐法規如有更新或變動者，依修正後之最新規定辦理。</div>
+                        <div class="dot txt">•本活動獎項之寄發，若因資料錯誤非可歸責保誠人壽之事由而導致無法收件或有其他問題，保誠人壽恕不負責。</div>
+                        <div class="dot txt">•保誠人壽非獎品製造者或提供者，與各項獎品或服務之製造或提供廠商無任何代理或合夥關係，且本活動獎品之保固期限均依廠商出廠時實際提供者為準。如領取後對獎品之使用方式、售後服務、保固等發生任何爭議，概與保誠人壽無關。</div>
+                        <div class="dot txt">•本活動之登入、交易、申請開通、抽獎資格、兌獎紀錄、中獎紀錄均以保誠人壽電腦系統紀錄為準，保誠人壽有權檢視各項交易、抽獎及相關紀錄，若參加者有任何違反活動注意事項、利用程式惡意影響活動結果或任何破壞公平性及其他非法行為等，保誠人壽保有取消其參加抽獎及中獎資格之權利。</div>
+                        <div class="dot txt">•保誠人壽保有取消、終止、修改、暫停活動、更換贈品等變更活動內容細項的權利，並得以公告方式通知參加者。如有未盡事宜，悉依保誠人壽相關規定或解釋辦理。</div>
+                        <div class="dot txt">•本活動之保誠人壽保險商品，其詳細給付內容、注意事項及條件限制等事項，請參閱保誠人壽網站相關商品介紹。為確保參加活動者的權益，基於保險公司與消費者衡平對等原則， 參加活動者仍應詳加閱讀保單條款與相關文件，審慎選擇保險商品。</div>
+                        <div class="dot txt">•相關針對個資蒐集、處理及利用告知事項詳見 : <a target="_blank" href="@ViewData[" Personal"]">保誠人壽蒐集、處理及利用個人資料告知事項。</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <figure class="fix-btn"><img src="~/images/fix-btn.png"></figure>
+    </article>
+    <footer></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@7.1.0/dist/promise.min.js"></script>
+    <script src="~/js/highlight.pack.js"></script>
+    <script src="~/js/TweenMax.min.js"></script>
+    <script src="~/js/ScrollMagic.js"></script>
+    <script src="~/js/animation.gsap.js"></script>
+    <script src="~/js/debug.addIndicators.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
+    <script src="~/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="~/js/sweetalert2.all.min.js"></script>
+    <script src="~/js/all.js"></script>
+</body>
+</html>
