@@ -121,7 +121,7 @@ block body
             .box
               p.txt
                 | 近
-                span.red.big 6
+                span.red.big 六
                 span.red 成
                 | 家長表示已
                 span.red 開始
@@ -131,7 +131,7 @@ block body
                 br
                 | 其中，超過
                 span.red 近
-                span.red.big 4
+                span.red.big 四
                 span.red 成
                 | 的家長願意投入家庭收入的11~20%作為教育經費。
               .chart-box
@@ -143,7 +143,7 @@ block body
                 | 相較2021年，
                 br
                 | 近
-                span.red.big 6
+                span.red.big 六
                 span.red 成
                 | 家長願意為子女投入
                 span.red.big 300
@@ -179,7 +179,7 @@ block body
                 | 以準備子女教育金
                 br
                 | 其中，選擇保險商品的家長則
-                span.red 超過5成
+                span.red 超過五成
               .chart-box
                 figure.pic
                   img(src="./images/section02-pic04.png")
@@ -227,7 +227,7 @@ block body
               img(src="./images/section04-gift.png")
         .box
           .item
-            .item-title 第1重 預約禮
+            .item-title 第一重 預約禮
             .txt 即日起至2022年12月31日止，當月成功預約並經顧問確認有諮詢事實，即可參與次月之抽獎活動，活動獎項將於2022年9月~2023年1月，每月的15日前以電腦隨機方式抽出40份「兩大超商二選一200元購物金」，共計200份。活動期間內每人限1次中獎機會。
             figure.pic
               img(src="./images/section04-pic01.png")
@@ -284,13 +284,15 @@ block body
                 .row-content
                   input#code(type="text",name="code" placeholder="請輸入驗證碼" autocomplete="off")
               .canvas-box
-                img(id="imgcode" src="@ViewData['captcha64']")
-                p.reload 重新整理
+                - var a = '@ViewData["captcha64"]'
+                img(id="imgcode" src=a)
+                p.reload(onclick="ReloadCode()") 重新整理
               .row.align-center
                 input#personalInformation(type="checkbox")
                 p.txt
                   | 我已閱讀並同意
-                  span#privacyBtn 個人資料告知暨同意事項
+                  - var a = '@ViewData["Policy"]'
+                  a#privacyBtn(target="_blank" href=a) 個人資料告知暨同意事項
               .row.align-center
                 input#checkBtn(type="checkbox")
                 p.txt
@@ -321,10 +323,13 @@ block body
               br
               | 無壓力媒合，簡單三步驟，找到最懂你的
               span.red 保險顧問
-            figure.pic
-              img(src="./images/section05-pic.png")
-            figure.btn2
-              img(src="./images/section05-btn02.png")
+            - var a = '@ViewData["OMO"]'
+            a(target="_blank" href=a)
+              figure.pic
+                img(src="./images/section05-pic.png")
+            a(target="_blank" href=a)
+              figure.btn2
+                img(src="./images/section05-btn02.png")
           
     section.section06
       .container
@@ -345,7 +350,7 @@ block body
               .item-title
                 | 保誠人壽
                 br
-                |萬事利達外幣終身壽險
+                | 萬事利達外幣終身壽險
               p.txt
                 | 美元貨幣，資產多元
                 br
@@ -359,13 +364,13 @@ block body
               .item-title
                 | 保誠人壽
                 br
-                |萬事利達外幣終身壽險
+                | 一路發外幣終身保險
               p.txt
-                | 美元貨幣，資產多元
+                | 年年領，入袋安心
                 br
-                | 英式分紅，累積保額
+                | 享紅利，步步高升
                 br
-                | 6年繳費，終身保障
+                | 有靠山，失能無憂
             .item
               .num 03
               figure.pic
@@ -373,13 +378,13 @@ block body
               .item-title
                 | 保誠人壽
                 br
-                |萬事利達外幣終身壽險
+                | 彩色人生外幣終身壽險
               p.txt
-                | 美元貨幣，資產多元
+                | 高額保障，圓夢彩色人生
                 br
-                | 英式分紅，累積保額
+                | 雙重紅利，安心規劃退休
                 br
-                | 6年繳費，終身保障
+                | 分期給付，彈性資產傳承
           figure.btn
             img(src="./images/section06-btn.png")
 
@@ -398,23 +403,29 @@ block body
             .tab.active 新聞曝光
             .tab 專家推薦
           .box.active
-            a.item(href="#") 
+            - var a = '@ViewData["News1"]'
+            a.item(href=a target="_blank")
               .item-title 經濟日報網
               .info 英國保誠人壽調查：逾7成家長用保險準備教育金
-            a.item(href="#") 
+            - var a = '@ViewData["News2"]'
+            a.item(href=a target="_blank")
               .item-title 經濟日報網
               .info 調查：準備教育基金 家長今年偏愛投資型保單
-            a.item(href="#") 
+            - var a = '@ViewData["News3"]'
+            a.item(href=a target="_blank")
               .item-title 自由時報
               .info 從小讀私校、出國留學費用破千萬 調查：7成家長用保險備妥教育金
           .box
-            a.item(href="#") 
+            - var a = '@ViewData["Recommend1"]'
+            a.item(href=a target="_blank")
               .item-title 標題1
               .info 內容1
-            a.item(href="#") 
+            - var a = '@ViewData["Recommend2"]'
+            a.item(href=a target="_blank")
               .item-title 標題2
               .info 內容2
-            a.item(href="#") 
+            - var a = '@ViewData["Recommend3"]'
+            a.item(href=a target="_blank")
               .item-title 標題3
               .info 內容3
 

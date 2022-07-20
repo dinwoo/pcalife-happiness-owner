@@ -347,6 +347,22 @@ function scrollToReserve() {
     );
 }
 
+function ReloadCode() {
+  $.ajax({
+    url: "/Home/Reload",
+    type: "post",
+    success: function (e) {
+      if (e.code === 200) {
+        $("#imgcode").attr("src", `${e.memo}`);
+      }
+    },
+    error: function (e) {
+      console.log(e);
+      sweetAlertError("重新整理失敗");
+    },
+  });
+}
+
 $(document).ready(function () {
   checkWid($(window).width());
   setAnimate();
@@ -408,12 +424,13 @@ $(document).ready(function () {
       return;
     }
     $.ajax({
-      url: "Home/Index",
+      url: "/Home/Index",
       type: "post",
       data: {
         name: $("#name").val(),
         gender: Number($("input[name='gender']:checked").val()),
         phone: $("#phone").val(),
+        code: $("#code").val(),
         deviceType: mobile() ? 2 : 1,
       },
       beforeSend: function (xhr) {
@@ -447,9 +464,11 @@ $(document).ready(function () {
             text: `送出失敗`,
           });
         }
+        $("#imgcode").attr("src", `${e.memo}`);
       },
       error: function (err) {
         console.log(err);
+        $("#imgcode").attr("src", `${err.memo}`);
         sweetAlertError("送出失敗");
       },
     });
