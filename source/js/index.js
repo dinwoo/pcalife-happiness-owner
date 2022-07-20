@@ -525,4 +525,37 @@ $(document).ready(function () {
   $(".success-popup .close").on("click", function () {
     $(".section05 .success-popup").fadeOut();
   });
+  let hamOpen = false;
+  $(".ham").on("click", function () {
+    if (hamOpen) {
+      $("header").removeClass("open");
+    } else {
+      $("header").addClass("open");
+    }
+    hamOpen = !hamOpen;
+  });
+  $("#mobileToSection3").on("click", () => {
+    $("header").removeClass("open");
+    hamOpen = false;
+    $("html,body")
+      .stop()
+      .animate(
+        {
+          scrollTop: $(".section03").offset().top - 50,
+        },
+        700
+      );
+  });
+  $("#mobileToSection6").on("click", () => {
+    $("header").removeClass("open");
+    hamOpen = false;
+    $("html,body")
+      .stop()
+      .animate(
+        {
+          scrollTop: $(".section06").offset().top - 100,
+        },
+        700
+      );
+  });
 });
