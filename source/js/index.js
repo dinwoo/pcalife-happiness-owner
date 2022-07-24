@@ -341,7 +341,7 @@ function scrollToReserve() {
     .stop()
     .animate(
       {
-        scrollTop: $(".section05").offset().top - 100,
+        scrollTop: $(".section05").offset().top - 50,
       },
       700
     );
@@ -373,7 +373,7 @@ $(document).ready(function () {
     loop: false,
     items: 1,
     center: true,
-    autoHeight: true,
+    autoHeight: false,
     margin: 70,
     onInitialize: (event) => {
       $(`.section02 .title1`).fadeIn();
@@ -381,6 +381,7 @@ $(document).ready(function () {
       $("#infoLeftArrow").addClass("disabled");
     },
     onChanged: (event) => {
+      console.log(event.page.index);
       if (event.page.index >= 0) {
         $("#infoNowPage").text(`0${event.page.index + 1}`);
         $(".section02 .title-box").fadeOut();
@@ -388,8 +389,10 @@ $(document).ready(function () {
       }
       if (event.page.index <= 0) {
         $("#infoLeftArrow").addClass("disabled");
+        $("#infoRightArrow").removeClass("disabled");
       } else if (event.page.index == 4) {
         $("#infoRightArrow").addClass("disabled");
+        $("#infoLeftArrow").removeClass("disabled");
       } else {
         $("#infoLeftArrow").removeClass("disabled");
         $("#infoRightArrow").removeClass("disabled");
@@ -442,7 +445,7 @@ $(document).ready(function () {
       success: function (e) {
         console.log(e);
         if (e.code === 200) {
-          $(".section05 .success-popup").fadeIn();
+          $(".success-popup").fadeIn();
           $("#name").val("");
           $("input[name='gender']").prop("checked", false);
           $("#phone").val("");
@@ -485,7 +488,7 @@ $(document).ready(function () {
       .stop()
       .animate(
         {
-          scrollTop: $(".section03").offset().top - 50,
+          scrollTop: $(".section03").offset().top,
         },
         700
       );
@@ -495,7 +498,7 @@ $(document).ready(function () {
       .stop()
       .animate(
         {
-          scrollTop: $(".section06").offset().top - 100,
+          scrollTop: $(".section06").offset().top - 0,
         },
         700
       );
@@ -523,7 +526,7 @@ $(document).ready(function () {
   });
 
   $(".success-popup .close").on("click", function () {
-    $(".section05 .success-popup").fadeOut();
+    $(".success-popup").fadeOut();
   });
   let hamOpen = false;
   $(".ham").on("click", function () {
@@ -541,7 +544,7 @@ $(document).ready(function () {
       .stop()
       .animate(
         {
-          scrollTop: $(".section03").offset().top - 50,
+          scrollTop: $(".section03").offset().top - 25,
         },
         700
       );
@@ -553,7 +556,7 @@ $(document).ready(function () {
       .stop()
       .animate(
         {
-          scrollTop: $(".section06").offset().top - 100,
+          scrollTop: $(".section06").offset().top - 25,
         },
         700
       );

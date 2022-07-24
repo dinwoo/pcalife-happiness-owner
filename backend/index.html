@@ -9,25 +9,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type">
-    <link rel="icon" target="_blank" href="~/images/favicon.ico">
-    <title>我的幸福我作主</title>
-    <link target="_blank" href="~/css/owl.carousel.min.css" rel="stylesheet">
-    <link target="_blank" href="~/css/owl.theme.default.min.css" rel="stylesheet">
-    <link target="_blank" href="~/css/jquery-ui.min.css" rel="stylesheet">
-    <link target="_blank" href="~/css/sweetalert2.min.css" rel="stylesheet">
-    <link target="_blank" href="~/css/all.css?a=1" rel="stylesheet">
+    <link rel="icon" href="~/images/favicon.ico">
+    <title>保誠人壽保險顧問媒合平台活動網站</title>
+    <link href="~/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="~/css/jquery-ui.min.css" rel="stylesheet">
+    <link href="~/css/sweetalert2.min.css" rel="stylesheet">
+    <link href="~/css/all.css" rel="stylesheet">
 </head>
 <body>
     @Html.AntiForgeryToken()
     <header>
         <figure class="logo"><img src="~/images/logo.png"></figure>
         <div class="box">
-            <p class="txt" id="toSection3">子女教育金準備五大心法</p>
-            <p class="txt" id="toSection6">子女教育準備必備商品</p>
-
+            <p class="txt" id="toSection3">五大心法</p>
+            <p class="txt" id="toSection6">必備商品</p>
             <iframe src="@ViewData[" FbShare"]" width="60" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             <div class="line-it-button" data-lang="zh_Hant" data-type="share-a" data-env="REAL" data-url="@ViewData[" LineShare"]" data-color="default" data-size="small" data-count="false" data-ver="3" style="display: none;"></div>
             <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+            <div class="ham">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <p class="txt" id="mobileToSection3">五大心法</p>
+            <p class="txt" id="mobileToSection6">必備商品</p>
         </div>
     </header>
     <article>
@@ -38,9 +46,9 @@
                 <div class="dialogue dialogue1">你知道大家都是如何<br>儲備子女教育金的嗎?</div>
                 <div class="dialogue dialogue2">你有算過該為孩子<br>準備多少教育基金嗎?</div>
             </div>
-            <div class="slogan" style=" position: fixed; z-index: 999; width: 100%; bottom: -1px;">
+            <div class="slogan">
                 <figure class="icon"><img src="~/images/banner-slogan-icon.png"></figure>
-                <p>保誠人壽和你一起儲備子女教育金</p>
+                <p>和保誠人壽一起儲備子女教育金</p>
                 <figure class="btn"><img src="~/images/banner-slogan-btn.png"></figure>
             </div>
         </section>
@@ -130,7 +138,7 @@
                 <div class="carousel-box owl-carousel" id="carouselBox02">
                     <div class="container container1">
                         <div class="box">
-                            <p class="txt">近<span class="red big">六</span><span class="red">成</span>家長表示已<span class="red">開始</span>為子女準備<span class="red">教育基金</span>，<br>其中，超過<span class="red">近</span><span class="red big">四</span><span class="red">成</span>的家長願意投入家庭收入的11~20%作為教育經費。</p>
+                            <p class="txt">超過<span class="red big">六</span><span class="red">成</span>家長表示已<span class="red">開始</span>為子女準備<span class="red">教育基金</span>，<br>其中，<span class="red">近</span><span class="red big">四</span><span class="red">成</span>的家長願意投入家庭收入的11~20%作為教育經費。</p>
                             <div class="chart-box">
                                 <figure class="pic"><img src="~/images/section02-pic01.png"></figure>
                             </div>
@@ -141,13 +149,13 @@
                             <p class="txt">相較2021年，<br>近<span class="red big">六</span><span class="red">成</span>家長願意為子女投入<span class="red big">300</span><span class="red">萬</span>元以上的教育經費。</p>
                             <div class="chart-box">
                                 <figure class="pic"><img src="~/images/section02-pic02.png"></figure>
-                                <figure class="pic2"><img src="~/images/section02-pic02-2.png"></figure>
+                                <figure class="pic2"><img src="~/images/section02-pic02-2.png"><img src="~/images/section02-pic02-3.png"></figure>
                             </div>
                         </div>
                     </div>
                     <div class="container container3">
                         <div class="box">
-                            <p class="txt"><span class="red">多數</span>家長仍傾向選擇<span class="red">長期投入</span>，分期領取回報的理財工具為孩子準備教育基金。</p>
+                            <p class="txt"><span class="red">多數</span>家長仍傾向選擇<span class="red">長期投入</span>，<span class="red">分期領取回報</span>的理財工具為孩子準備教育基金。</p>
                             <div class="chart-box">
                                 <figure class="pic"><img src="~/images/section02-pic03.png"></figure>
                             </div>
@@ -155,7 +163,7 @@
                     </div>
                     <div class="container container4">
                         <div class="box">
-                            <p class="txt">逾<span class="red">七成</span>家長偏好使用<span class="green">低風險</span>的<span class="green">定存儲蓄</span>及<span class="green">保險商品</span>以準備子女教育金<br>其中，選擇保險商品的家長則<span class="red">超過五成</span></p>
+                            <p class="txt">逾<span class="red">七成</span>家長偏好使用<span class="green">低風險</span>的<span class="green">定存儲蓄</span>準備子女教育金<br>選擇保險商品的家長則<span class="red">超過五成</span></p>
                             <div class="chart-box">
                                 <figure class="pic"><img src="~/images/section02-pic04.png"></figure>
                             </div>
@@ -163,7 +171,7 @@
                     </div>
                     <div class="container container5">
                         <div class="box">
-                            <p class="txt">近<span class="red">五成</span>家長仍偏好使用<span class="green">分紅保單</span>準備教育金，<span class="green">投資型保單</span>相較於2020年成長<span class="red">逾25%</span>。<br>顯示多數家長偏好長期持有，同時滿足<span class="red">投資</span>與<span class="red">保障</span>的雙重需求。</p>
+                            <p class="txt">有<span class="red">四成</span>家長仍偏好使用<span class="green">分紅保單</span>準備教育金，<br>顯示多數家長偏好長期持有，同時滿足<span class="red">投資</span>與<span class="red">保障</span>的雙重需求。</p>
                             <div class="chart-box">
                                 <figure class="pic"><img src="~/images/section02-pic05.png"></figure>
                             </div>
@@ -171,7 +179,7 @@
                     </div>
                 </div>
             </div>
-            <div class="remind">資料來源：保誠人壽2020～2022年子女教育金準備調查</div>
+            <div class="remind">資料來源：保誠人壽2021～2022年子女教育金準備調查</div>
         </section>
         <section class="section03">
             <div class="wrapper">
@@ -194,11 +202,11 @@
                 <div class="box">
                     <div class="item">
                         <div class="item-title">第一重 預約禮</div>
-                        <div class="txt">即日起至2022年12月31日止，當月成功預約並經顧問確認有諮詢事實，即可參與次月之抽獎活動，活動獎項將於2022年9月~2023年1月，每月的15日前以電腦隨機方式抽出40份「兩大超商二選一200元購物金」，共計200份。活動期間內每人限1次中獎機會。</div>
+                        <div class="txt">即日起至2022年12月31日止，當月成功預約並經顧問確認有諮詢事實，即可參與次月之抽獎活動，活動獎項將於2022年9月~2023年1月，每月的15日前以電腦隨機方式抽出45份「兩大超商二選一200元購物金」，共計225份。活動期間內每人限1次中獎機會。</div>
                         <figure class="pic"><img src="~/images/section04-pic01.png"></figure>
                     </div>
                     <div class="item">
-                        <div class="item-title">第二重 投保禮</div>
+                        <div class="item-title">第2重 投保禮</div>
                         <div class="txt">即日起至2022年12月31日止，預約顧問諮詢並投保成功，即有機會獲得「3,000元多選一福利即享券」，12大品牌擇一使用，每人限1次中獎機會，共計將抽出10名。</div>
                         <figure class="pic"><img src="~/images/section04-pic02.png"></figure>
                     </div>
@@ -267,7 +275,9 @@
                             </div>
                             <div class="row align-center">
                                 <input id="personalInformation" type="checkbox">
-                                <p class="txt">我已閱讀並同意<a target="_blank" href="@ViewData[" Policy"]"><span id="privacyBtn">個人資料告知暨同意事項</span></a></p>
+                                <p class="txt">
+                                    我已閱讀並同意<a id="privacyBtn" target="_blank" href="@ViewData[" Policy"]">個人資料告知暨同意事項</a>
+                                </p>
                             </div>
                             <div class="row align-center">
                                 <input id="checkBtn" type="checkbox">
@@ -287,9 +297,11 @@
                     </div>
                     <div class="item">
                         <div class="item-title">我想<span class="orange">自己挑顧問</span></div>
-                        <div class="remind">依個人需求量身篩選，輸入條件、快速篩選、<br>無壓力媒合，簡單三步驟，找到最懂你的<span class="red">保險顧問</span></div>
-                        <figure class="pic"><a href="@ViewData[" OMO"]"><img src="~/images/section05-pic.png"></a> </figure>
-                        <figure class="btn2"><a href="@ViewData[" OMO"]"><img src="~/images/section05-btn02.png"></a> </figure>
+                        <div class="remind">依個人需求量身篩選，輸入條件、快速篩選、<br>無壓力媒合，簡單三步驟，找到最懂你的<span class="red">保險顧問</span></div><a target="_blank" href="@ViewData[" OMO"]">
+                            <figure class="pic"><img src="~/images/section05-pic.png"></figure>
+                        </a><a target="_blank" href="@ViewData[" OMO"]">
+                            <figure class="btn2"><img src="~/images/section05-btn02.png"></figure>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -347,27 +359,27 @@
                         <div class="tab">專家推薦</div>
                     </div>
                     <div class="box active">
-                        <a class="item" target="_blank" href="@ViewData[" News1"]">
+                        <a class="item" href="@ViewData[" News1"]" target="_blank">
                             <div class="item-title">經濟日報網</div>
                             <div class="info">英國保誠人壽調查：逾7成家長用保險準備教育金</div>
-                        </a><a class="item" target="_blank" href="@ViewData[" News2"]">
+                        </a><a class="item" href="@ViewData[" News2"]" target="_blank">
                             <div class="item-title">經濟日報網</div>
                             <div class="info">調查：準備教育基金 家長今年偏愛投資型保單</div>
-                        </a><a class="item" target="_blank" href="@ViewData[" News3"]">
+                        </a><a class="item" href="@ViewData[" News3"]" target="_blank">
                             <div class="item-title">自由時報</div>
                             <div class="info">從小讀私校、出國留學費用破千萬 調查：7成家長用保險備妥教育金</div>
                         </a>
                     </div>
                     <div class="box">
-                        <a class="item" target="_blank" href="@ViewData[" Recommend1"]">
-                            <div class="item-title">標題1</div>
-                            <div class="info">內容1</div>
-                        </a><a class="item" target="_blank" href="@ViewData[" Recommend2"]">
-                            <div class="item-title">標題2</div>
-                            <div class="info">內容2</div>
-                        </a><a class="item" target="_blank" href="@ViewData[" Recommend3"]">
-                            <div class="item-title">標題3</div>
-                            <div class="info">內容3</div>
+                        <a class="item" href="@ViewData[" Recommend1"]" target="_blank">
+                            <div class="item-title"> </div>
+                            <div class="info"> </div>
+                        </a><a class="item" href="@ViewData[" Recommend2"]" target="_blank">
+                            <div class="item-title"> </div>
+                            <div class="info"> </div>
+                        </a><a class="item" href="@ViewData[" Recommend3"]" target="_blank">
+                            <div class="item-title"> </div>
+                            <div class="info"> </div>
                         </a>
                     </div>
                 </div>
@@ -379,7 +391,7 @@
                 <div class="info-box">
                     <div class="row">
                         <div class="sub-title">第一重 預約禮</div>
-                        <div class="txt">當月成功預約並經顧問確認有諮詢事實，即可參與次月之抽獎活動，活動獎項將於2022年9月~2023年1月，每月的15日前以電腦隨機方式抽出40份「兩大超商二選一200元購物金」 ，共計200份。活動期間內每人限1次中獎機會。得獎名單將公告於本活動網頁<a target="_blank" href="@ViewData[" Price1"]">此處</a>，並於公告後兩週內以手機簡訊方式發送「兩大超商二選一200元購物金」電子序號及兌換方式給中獎者，請中獎者於指定之期限內完成領獎手續，若逾時未回覆或未提供正確資訊以供聯繫者，視同放棄。本活動若有變動將於本活動網頁公告，不另行通知。</div>
+                        <div class="txt">當月成功預約並經顧問確認有諮詢事實，即可參與次月之抽獎活動，活動獎項將於2022年9月~2023年1月，每月的15日前以電腦隨機方式抽出45份「兩大超商二選一200元購物金」 ，共計225份。活動期間內每人限1次中獎機會。得獎名單將公告於本活動網頁<a target="_blank" href="@ViewData[" Price1"]">此處</a>，並於公告後兩週內以手機簡訊方式發送「兩大超商二選一200元購物金」電子序號及兌換方式給中獎者，請中獎者於指定之期限內完成領獎手續，若逾時未回覆或未提供正確資訊以供聯繫者，視同放棄。本活動若有變動將於本活動網頁公告，不另行通知。</div>
                     </div>
                     <div class="row">
                         <div class="sub-title">第二重 投保禮</div>
@@ -404,7 +416,7 @@
                     </div>
                     <div class="row">
                         <div class="sub-title">第一重 預約禮</div>
-                        <div class="txt">活動期間內於<a target="_blank" href="@ViewData[" Activity1"]">本活動網頁</a>或<a target="_blank" href="@ViewData[" Activity_OMO1"]">「我的幸福我做主」保險顧問媒合平台</a>，當月成功預約並經顧問確認有諮詢事實，即可參與次月之抽獎活動，活動獎項將於2022年9月~2023年1月，每月的15日前以電腦隨機方式抽出40份「兩大超商二選一200元購物金」，共計200份。活動期間內每人限一次中獎機會，若手機號碼相同將視為同一預約者。</div>
+                        <div class="txt">活動期間內於<a target="_blank" href="@ViewData[" Activity1"]">本活動網頁</a>或<a target="_blank" href="@ViewData[" Activity_OMO1"]">「我的幸福我做主」保險顧問媒合平台</a>，當月成功預約並經顧問確認有諮詢事實，即可參與次月之抽獎活動，活動獎項將於2022年9月~2023年1月，每月的15日前以電腦隨機方式抽出45份「兩大超商二選一200元購物金」，共計225份。活動期間內每人限一次中獎機會，若手機號碼相同將視為同一預約者。</div>
                     </div>
                     <div class="row">
                         <div class="sub-title">第二重 投保禮</div>

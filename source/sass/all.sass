@@ -47,6 +47,8 @@ header
       +dib
       & + p.txt
         margin-right: 80px
+    iframe
+      margin: 0 10px
     a.share
       width: 80px
       margin: 0 10px
@@ -65,6 +67,8 @@ header
         font-size: 0.8rem
         & + p.txt
           margin-right: 10px
+      iframe
+        margin: 0 5px
       a.share
         width: 50px
         margin: 0 5px
@@ -148,6 +152,70 @@ figure.fix-btn
   +rwd(540px)
     width: 60px
     right: 0.2rem
+
+.success-popup
+  display: none
+  width: 100%
+  height: 100%
+  background-color: rgba(#fff,.7)
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 200
+  .main
+    max-width: 570px
+    width: 95%
+    padding: 25px 40px
+    border: 3px solid #000
+    border-radius: 1rem
+    background-color: #fff
+    box-sizing: border-box
+    text-align: center
+    +pstc5
+    .close
+      width: 60px
+      margin-left: auto
+      cursor: pointer
+      .close-btn
+        width: 60px
+        height: 60px
+        border: 3px solid #000
+        background-color: $red06
+        border-radius: 50%
+        box-sizing: border-box
+        position: relative
+        transform: rotate(45deg)
+        &:before,&:after
+          content: ''
+          display: block
+          background-color: #000
+          +pstc5
+        &:before
+          width: 3px
+          height: 70%
+        &:after
+          width: 70%
+          height: 3px
+      p
+        font-size: 1.2rem
+        color: #000
+    .info
+      padding-bottom: 50px
+      font-size: 1.25rem
+      line-height: 1.7
+  +rwd(540px)
+    .main
+      padding: 15px
+      .close
+        width: 40px
+        .close-btn
+          width: 40px
+          height: 40px
+        p
+          font-size: 0.8rem
+      .info
+        padding-bottom: 30px
+        font-size: 0.8rem
 
 
 html
@@ -249,7 +317,7 @@ html
             width: 100%
           figure.kv
             width: 90%
-            padding-right: 40px
+            padding-right: 0px
           //   margin: -9% auto -4%
           .dialogue
             padding: 0.3rem
@@ -383,10 +451,11 @@ html
               &:nth-child(1)
                 width: 100%
               &:nth-child(2)
-                width: 100%
-                padding-left: 7%
+                width: 290px
+                margin: auto
               figure.btn
-                width: 60%
+                width: 78%
+                margin: 15px auto
 
     section.section02
       padding: 170px 0 50px
@@ -666,6 +735,12 @@ html
           right: 0
           margin: auto
           cursor: pointer
+      +rwd(768px)
+        .wrapper
+          figure.btn
+            width: 65%
+            bottom: -10%
+
 
     section.section04
       padding: 90px 0 110px
@@ -727,7 +802,7 @@ html
               margin: auto
               box-shadow: 5px 5px 7px rgba($gray01,.2)
       +rwd(768px)
-        padding: 60px 0 30px
+        padding: 60px 0
         .wrapper
           padding: 50px 15px
           .title-box
@@ -748,7 +823,9 @@ html
               .txt
                 min-height: auto
                 margin-bottom: 15px
-                font-size: 0.875rem
+                font-size: 1rem
+              figure.pic
+                width: 70%
 
     section.section05
       background-color: $gray02
@@ -875,6 +952,7 @@ html
               margin: 40px auto
               cursor: pointer
             .remind
+              padding: 0 0.5rem
               font-size: 1.25rem
               text-align: center
               span.red
@@ -887,56 +965,6 @@ html
               width: 190px
               margin: 40px auto
               cursor: pointer
-            .success-popup
-              display: none
-              width: 100%
-              height: 100%
-              background-color: rgba(#fff,.7)
-              position: absolute
-              top: 0
-              left: 0
-              z-index: 1
-              .main
-                max-width: 570px
-                width: 95%
-                padding: 25px 40px
-                border: 3px solid #000
-                border-radius: 1rem
-                background-color: #fff
-                box-sizing: border-box
-                text-align: center
-                +pstc5
-                .close
-                  width: 60px
-                  margin-left: auto
-                  cursor: pointer
-                  .close-btn
-                    width: 60px
-                    height: 60px
-                    border: 3px solid #000
-                    background-color: $red06
-                    border-radius: 50%
-                    box-sizing: border-box
-                    position: relative
-                    transform: rotate(45deg)
-                    &:before,&:after
-                      content: ''
-                      display: block
-                      background-color: #000
-                      +pstc5
-                    &:before
-                      width: 3px
-                      height: 70%
-                    &:after
-                      width: 70%
-                      height: 3px
-                  p
-                    font-size: 1.2rem
-                    color: #000
-                .info
-                  padding-bottom: 50px
-                  font-size: 1.25rem
-                  line-height: 1.7
       +rwd(1280px)
         .wrapper
           padding: 80px 0
@@ -952,7 +980,7 @@ html
           .box
             .item
               .item-title
-                width: 140px
+                width: 150px
                 padding: 4px 0
                 font-size: 1.2rem
       +rwd(540px)
@@ -1004,24 +1032,14 @@ html
                 width: 120px
                 margin: 20px auto
               .remind
+                padding: 20px 0.5rem 0
                 padding-top: 20px
                 font-size: 1rem
+                br
+                  display: none
               figure.btn2
                 width: 120px
                 margin: 20px auto
-              .success-popup
-                .main
-                  padding: 15px
-                  .close
-                    width: 40px
-                    .close-btn
-                      width: 40px
-                      height: 40px
-                    p
-                      font-size: 0.8rem
-                  .info
-                    padding-bottom: 30px
-                    font-size: 0.8rem
 
     section.section06
       padding: 90px 0
@@ -1097,7 +1115,7 @@ html
                 p.txt
                   font-size: 0.875rem
             figure.btn
-              width: 70%
+              width: 65%
 
     section.section07
       padding-bottom: 50px
