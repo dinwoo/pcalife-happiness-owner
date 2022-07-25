@@ -285,13 +285,17 @@ block body
                 img(id="imgcode" src=a)
                 p.reload(onclick="ReloadCode()") 重新整理
               .row.align-center
-                input#personalInformation(type="checkbox")
+                label
+                  input#personalInformation(type="checkbox")
+                  .check-box
                 p.txt
                   | 我已閱讀並同意
                   - var a = '@ViewData["Policy"]'
                   a#privacyBtn(target="_blank" href=a) 個人資料告知暨同意事項
               .row.align-center
-                input#checkBtn(type="checkbox")
+                label
+                  input#checkBtn(type="checkbox")
+                  .check-box
                 p.txt
                   | 我已確認以上資料正確無誤 
             figure.btn1#sendBtn
