@@ -503,6 +503,16 @@ $(document).ready(function () {
         700
       );
   });
+  $("#toSection8").on("click", () => {
+    $("html,body")
+      .stop()
+      .animate(
+        {
+          scrollTop: $(".section08").offset().top - 0,
+        },
+        700
+      );
+  });
 
   $(".section07 .tab").on("click", function () {
     const index = $(this).index();
@@ -557,6 +567,18 @@ $(document).ready(function () {
       .animate(
         {
           scrollTop: $(".section06").offset().top - 25,
+        },
+        700
+      );
+  });
+  $("#mobileToSection8").on("click", () => {
+    $("header").removeClass("open");
+    hamOpen = false;
+    $("html,body")
+      .stop()
+      .animate(
+        {
+          scrollTop: $(".section08").offset().top - 0,
         },
         700
       );

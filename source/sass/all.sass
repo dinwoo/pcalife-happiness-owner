@@ -39,13 +39,15 @@ header
   figure.logo
     width: 145px
   .box
+    display: flex
+    align-items: center
     p.txt
       padding: 0 10px
       font-size: 1rem
       color: $gray05
       cursor: pointer
       +dib
-      & + p.txt
+      &:nth-child(3)
         margin-right: 80px
     iframe
       margin: 0 10px
@@ -65,7 +67,7 @@ header
       p.txt
         padding: 0 5px
         font-size: 0.8rem
-        & + p.txt
+        &:nth-child(3)
           margin-right: 10px
       iframe
         margin: 0 5px
@@ -148,14 +150,18 @@ footer.pam-footer
         padding: 10px 0 10px 10px
         a
           text-decoration: none
-          font-size: 14px
+          font-size: 0.9rem
           color: $blue02
           font-weight: bold
+          +rwd(768px)
+            font-size: 0.875rem
         span.pam-footer-nav__item-pipe
-          font-size: 14px
+          font-size: 0.9rem
           color: $blue02
           font-weight: bold
           padding-left: 10px
+          +rwd(768px)
+            font-size: 0.875rem
   section.pam-footer-contact
     padding: 10px 20px
     display: flex
@@ -168,26 +174,34 @@ footer.pam-footer
       li.pam-footer-contact__item
         padding-bottom: 10px
         color: #68737a
-        font-size: 12px
+        font-size: 0.9rem
         text-align: center
         line-height: 20px
+        +rwd(768px)
+          font-size: 0.75rem
         span.phone
           color: #222
-          font-size: 14px
+          font-size: 0.9rem
+          +rwd(768px)
+            font-size: 0.875rem
       li.pam-footer-contact__item
         color: #68737a
-        font-size: 12px
+        font-size: 0.9rem
         text-align: center
         line-height: 20px
+        +rwd(768px)
+          font-size: 0.75rem
   section.pam-footer-copywriting
     background-color: #ed1b2e
     display: flex
     justify-content: center
     color: #fff
     padding: 10px 0
-    font-size: 12px
+    font-size: 0.9rem
     font-weight: 700
     line-height: 20px
+    +rwd(768px)
+      font-size: 0.75rem
 
 
 figure.fix-btn
@@ -218,7 +232,7 @@ figure.fix-btn
   left: 0
   z-index: 200
   .main
-    max-width: 570px
+    max-width: 590px
     width: 95%
     padding: 25px 40px
     border: 3px solid #000
@@ -508,6 +522,8 @@ html
               &:nth-child(2)
                 width: 290px
                 margin: auto
+              p.txt
+                text-align: center
               figure.btn
                 width: 78%
                 margin: 15px auto
@@ -796,7 +812,6 @@ html
             width: 65%
             bottom: -10%
 
-
     section.section04
       padding: 90px 0 110px
       background-color: $red05
@@ -830,14 +845,17 @@ html
               width: 75px
               +dib
         .box
-          font-size: 0
+          display: flex
           .item
             width: 50%
-            padding: 0 50px
+            margin: 0 50px
             box-sizing: border-box
             text-align: center
-            display: inline-block
-            vertical-align: top
+            &:nth-child(2)
+              position: 
+              figure.pic
+                position: absolute
+                bottom: 0
             .item-title
               padding: 10px 50px
               margin-bottom: 30px
@@ -868,9 +886,14 @@ html
               figure.gift-pic
                 width: 35px
           .box
+            display: block
             .item
               width: 100%
               padding: 15px 0
+              margin: 0
+              &:nth-child(2)
+                figure.pic
+                  position: static
               .item-title
                 padding: 10px 30px
                 margin-bottom: 15px
