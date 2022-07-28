@@ -512,6 +512,9 @@ $(document).ready(function () {
         },
         700
       );
+    $(".section08 .container:nth-child(1) .info-box").slideDown();
+    $(".section08 .container:nth-child(1) .title").attr("isShow", 1);
+    $(".section08 .container:nth-child(1) .title span").text("－");
   });
 
   $(".section07 .tab").on("click", function () {
@@ -582,5 +585,8 @@ $(document).ready(function () {
         },
         700
       );
+    $(".section08 .container:nth-child(1) .info-box").slideDown();
+    $(".section08 .container:nth-child(1) .title").attr("isShow", 1);
+    $(".section08 .container:nth-child(1) .title span").text("－");
   });
 });
