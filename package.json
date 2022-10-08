@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "gulp",
-    "build": "sh deploy.sh"
+    "build:github": "sh deploy.sh",
+    "build:vercel": "gulp build --env production"
   },
   "repository": {
     "type": "git",
